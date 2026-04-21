@@ -1,14 +1,12 @@
 ---
-title: "Название поста"
+title: "Книга пост"
 date: "2026-04-17"
 description: "Короткий пост о том, как форма текста влияет на внимание читателя."
 tags: ["блог", "мысли"]
 readingTime: 2
 published: true
-seoTitle: "Название поста"
 ogImage: "../media/defaultPost.webp"
 ---
-
 ![Гравюрный портрет для hero-изображения поста](../media/defaultPost.webp)
 
 ## Подзаголовок
