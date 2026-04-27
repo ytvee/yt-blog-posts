@@ -60,6 +60,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: style-adapted material and post contract
 - Action: assemble a markdown post draft using the templates and mirrored contract
+- Action: calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md` after the draft body is in place
 - Output: draft in the format from `.agents/templates/post-draft-template.md`
 - Stop condition: a reviewable draft exists with valid structure
 - What must not be done: do not mark the post final before review; do not leave publish-facing placeholders
@@ -84,6 +85,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: revised draft and `.agents/project/60-final-qa-gates.md`
 - Action: perform the full pre-publish check
+- Action: re-run `python3 scripts/calc_reading_time.py content/<slug>.md` if the body changed materially during revision
 - Output: QA report in the format from `.agents/templates/qa-report-template.md`
 - Stop condition: all blocking checks pass or are explicitly flagged
 - What must not be done: do not claim readiness if blockers remain

@@ -52,6 +52,20 @@ A task is done only when all of the following are true:
 - no assumptions are made about application code that is not present in this repo
 - no work escapes the current repository scope
 
+## Reading Time Rule
+
+Agents must calculate `readingTime` with the repository script, not by guessing.
+
+- Command: `python3 scripts/calc_reading_time.py content/<slug>.md`
+- Input: path to the markdown article file
+- Output: integer number of minutes to place into frontmatter
+- Formula:
+  - readable character count divided by `1500`
+  - plus `0.2` minutes for each image
+  - round up only when the fractional part is `0.3` or higher
+  - keep the minimum result at `1`
+- Use `python3 scripts/calc_reading_time.py content/<slug>.md --details` when the agent needs to inspect the breakdown.
+
 ## Do
 
 - treat this repository as content-only and posts-only

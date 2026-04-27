@@ -46,6 +46,13 @@ Validation rules:
 - Prefer `YYYY-MM-DD` for both fields.
 - `readingTime` must be an integer greater than zero.
 - Recalculate `readingTime` after substantial edits.
+- Calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`.
+- Reading time formula:
+  - count readable characters in the article body after removing frontmatter and markdown-only syntax
+  - divide the readable character count by `1500`
+  - add `0.2` minutes per image
+  - round up only when the fractional part is `0.3` or higher
+  - clamp the final value to a minimum of `1`
 - `published: false` means draft.
 - `description` is a working field for cards, metadata, and the lead paragraph, not decorative filler.
 - For published posts, `ogImage` is treated as required in practice.

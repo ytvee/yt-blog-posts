@@ -44,6 +44,7 @@ Use this checklist before returning a final markdown post.
 - Are all required keys present?
 - Are dates valid and in the preferred format?
 - Is `readingTime` a positive integer?
+- Does `readingTime` match `python3 scripts/calc_reading_time.py content/<slug>.md`?
 - Is `published` correct for the current state?
 - Are optional keys limited to the allowed schema?
 
