@@ -59,6 +59,8 @@ Agents must calculate `readingTime` with the repository script, not by guessing.
 - Command: `python3 scripts/calc_reading_time.py content/<slug>.md`
 - Input: path to the markdown article file
 - Output: integer number of minutes to place into frontmatter
+- Calculate `readingTime` only at the very end, when the article body is already final and ready to return.
+- If the article changes after the calculation, run the script again and update `readingTime` before final output.
 - Formula:
   - readable character count divided by `1500`
   - plus `0.2` minutes for each image

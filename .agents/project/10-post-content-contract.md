@@ -45,8 +45,9 @@ Validation rules:
 - `updatedAt` must be a valid date when present.
 - Prefer `YYYY-MM-DD` for both fields.
 - `readingTime` must be an integer greater than zero.
-- Recalculate `readingTime` after substantial edits.
 - Calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`.
+- Calculate it only after the article text is final.
+- If the article changes materially after the calculation, recalculate `readingTime` before returning the final markdown.
 - Reading time formula:
   - count readable characters in the article body after removing frontmatter and markdown-only syntax
   - divide the readable character count by `1500`

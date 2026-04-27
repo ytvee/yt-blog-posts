@@ -21,6 +21,7 @@ Notes:
 
 - remove optional keys that are not needed
 - do not add keys outside the mirrored contract
-- calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`
+- keep `readingTime` temporary while the article is still changing
+- calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md` only after the article text is final
 - for published posts, treat `ogImage` as required
 - `adBanners` is allowed only when really needed and should match `{ imageSrc, alt, href? }[]`

@@ -30,5 +30,6 @@ Rules:
 
 - body must start with `##`
 - do not put `#` in the body
-- calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`
+- leave `readingTime` as a temporary value while drafting
+- calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md` only after the article text is final
 - do not leave placeholders in publish-facing fields

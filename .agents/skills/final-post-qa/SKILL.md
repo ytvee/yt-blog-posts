@@ -29,8 +29,9 @@ Run the last pre-publish review on a post draft.
 1. Check factual sanity.
 2. Check language quality and anti-AI phrasing.
 3. Check structure, headings, and readability.
-4. Validate frontmatter and media expectations.
-5. Report blockers or confirm readiness.
+4. When the article text is final, calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`.
+5. Validate frontmatter and media expectations.
+6. Report blockers or confirm readiness.
 
 ## Must Not
 
