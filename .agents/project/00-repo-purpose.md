@@ -31,3 +31,5 @@ The agent works on writing, editing, structuring, and validating posts within th
 - Do not invent application behavior when it is not documented in the mirrored contract.
 - Do not add architecture, frontend, or backend guidance for the external blog app.
 - Treat all app-facing rules here as mirrored/manual-sync information unless they come from a file stored in this repository.
+- Work only inside the currently open repository workspace.
+- Do not inspect sibling repositories or unrelated local folders unless the user explicitly changes scope.

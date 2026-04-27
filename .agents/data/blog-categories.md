@@ -1,192 +1,101 @@
 # Blog Categories
 
-Primary content categories for YTDEV Blog. Each post should belong to one primary category (can have secondary tags).
+Primary editorial categories for YTDEV. Each post should have one primary category. Secondary tags are optional.
 
 Last updated: 2026-04-27
 
----
+## 1. AI for Business
 
-## 1. AI для бизнеса
+Focus:
 
-**Focus:** How AI changes processes, teams, products, marketing, and profit models.
+How AI changes processes, teams, products, marketing, operations, and profit models.
 
-**Scope:**
-- AI as competitive advantage (when it actually matters vs hype)
-- Team transformation through AI
-- Product features powered by AI
-- Marketing and sales automation
-- Business model changes from AI
-- Cost/benefit analysis of AI adoption
-- Practical implementation patterns
+Use this category for:
 
-**Target audience:** Entrepreneurs, founders, business decision-makers
+- AI adoption with measurable business consequences
+- workflow and process redesign
+- AI-powered product decisions
+- marketing and sales automation with real trade-offs
+- ROI analysis and operating reality
 
-**Post examples (planned):**
-- "Почему сегодня зарабатывать с помощью ИИ проще, чем когда-либо" ✓
-- "ИИ усиливает не всех: почему выигрывают те, у кого уже есть система"
-- "Как автоматизировать работу с ИИ без потери контроля"
+Avoid when:
 
-**Key characteristics:**
-- Data-driven examples
-- Real business metrics (cost savings, time, ROI)
-- Honest about limitations
-- Systems thinking (not just tool analysis)
+- the post is only a tool roundup
+- the post is only model news with no business angle
 
----
+## 2. IT Business and the Digital Market
 
-## 2. IT-бизнес и digital-рынок
+Focus:
 
-**Focus:** How digital companies work: SaaS, agencies, startups, product strategy, growth, and mistakes.
+How digital companies actually work: SaaS, agencies, startups, monetization, product strategy, growth, and mistakes.
 
-**Scope:**
-- Startup and product launch lessons
-- SaaS business models
-- Agency vs product tradeoffs
-- Growth strategies (organic, viral, paid)
-- Market timing and positioning
-- Competitive analysis
-- Revenue models and pricing
-- Team building in tech
-- Common startup mistakes
+Use this category for:
 
-**Target audience:** Entrepreneurs, founders, tech business people, aspiring product builders
+- pricing and monetization
+- founder decisions
+- agency and SaaS operating lessons
+- market behavior and digital business models
+- launch mistakes and commercial trade-offs
 
-**Post examples (existing/planned):**
-- "Первый опыт. Большой факап." ✓ (bootcamp launch failure)
-- "Как студенту превратить ИИ-навыки в первую услугу"
-- "Хороший сайт — это не страница в интернете, а часть бизнес-системы"
-- "Почему личный бренд разработчика начинается не с постов, а с позиции"
+Avoid when:
 
-**Key characteristics:**
-- Real numbers and metrics
-- Honest failure analysis
-- Practical frameworks
-- Systems view of business
+- the post is purely technical with no market or business consequence
 
----
+## 3. Web and Product Through Business and User Behavior
 
-## 3. Веб и продукт глазами бизнеса и пользователя
+Focus:
 
-**Focus:** Why products work, why people use them, where business wins or loses, and design patterns for entrepreneurs.
+Why products work, why people use them, where businesses win or lose, and which design or architecture patterns matter to entrepreneurs.
 
-**Scope:**
-- Product-market fit and positioning
-- User behavior and psychology
-- Interface design for business outcomes
-- Conversion and retention patterns
-- User research and testing
-- Product strategy for founders
-- MVP and iteration
-- Technical decisions that affect UX/business
-- Architecture and scalability from business view
+Use this category for:
 
-**Target audience:** Developers who want to understand business, product managers, entrepreneurs, designers, founders
+- UX and product behavior
+- architecture decisions with business impact
+- product design through incentives and outcomes
+- web performance, clarity, and usability as business leverage
 
-**Post examples (planned):**
-- "Почему frontend-разработчику важно понимать бизнес"
-- "Понятные интерфейсы как конкурентное преимущество"
-- "Что отличает полезный образовательный продукт от набора уроков"
-- "Как архитектура кода влияет на скорость запуска функций"
+Avoid when:
 
-**Key characteristics:**
-- Business outcomes matter more than technical perfection
-- User perspective grounded in research
-- Design patterns across industries
-- Real product examples
+- the post is a framework-free coding tutorial
 
----
+## 4. Breakdowns of Strong Ideas
 
-## 4. Разбор сильных идей
+Focus:
 
-**Focus:** Curating rare materials, research, essays, posts, and cases with adaptation for Russian-speaking audience.
+Curating rare materials, research, posts, and cases and adapting them for a Russian-speaking audience.
 
-**Scope:**
-- Deep dives into original research papers/studies
-- Analysis of interesting case studies from global sources
-- Synthesis of multiple perspectives on complex topics
-- Thoughtful essays from global thought leaders (adapted)
-- Rare insights that challenge conventional wisdom
-- Ideas that are undersold or overlooked
-- Cross-industry patterns and lessons
+Use this category for:
 
-**Target audience:** Thoughtful practitioners, systems thinkers, people who want deeper understanding
+- strong source-driven adaptations
+- high-signal article breakdowns
+- rare research or long-form thinking translated into usable insight
+- structured commentary on excellent external material
 
-**Post examples (existing/planned):**
-- "Состояние за работой" ✓ (music, productivity research)
-- "Торговля вниманием пользователей" ✓ (RTB system analysis)
-- Posts analyzing research on learning, psychology, economics, etc.
+Avoid when:
 
-**Key characteristics:**
-- Original source material cited
-- Not just summarizing — adding perspective
-- Connecting ideas across domains
-- Adaptation for CIS context
-- Critical thinking
+- the source is weak, generic, or already over-discussed
 
----
+## 5. Practical Thinking
 
-## 5. Практическое мышление
+Focus:
 
-**Focus:** Frameworks, decision-making models, observations, anti-patterns, market mistakes.
+Decision frameworks, mental models, market mistakes, anti-patterns, and useful observations about work and business.
 
-**Scope:**
-- Mental models for problem-solving
-- Decision frameworks
-- Market patterns and cycles
-- Common business anti-patterns
-- Psychological biases in tech/business
-- Systems thinking tools
-- Observation-based lessons
-- Industry patterns and trends
+Use this category for:
 
-**Target audience:** Anyone wanting better thinking tools; entrepreneurs, managers, builders, learners
+- frameworks for better judgment
+- anti-hype thinking
+- reliability, trade-offs, and execution discipline
+- observations about work, systems, and behavior
 
-**Post examples (existing/planned):**
-- "5 результатов обучения в IT и не только" ✓ (education framework)
-- "Рынок снова пошёл в минус" ✓ (market cycle pattern)
-- "О взаимоотношениях, проектах и идеях" ✓ (reliability insights)
-- "ИИ усиливает не всех: почему выигрывают те, у кого уже есть система"
+Avoid when:
 
-**Key characteristics:**
-- Actionable frameworks
-- Pattern recognition across domains
-- Distilled wisdom
-- Counter-intuitive insights
+- the post is only abstract philosophy with no practical edge
 
----
+## Category Selection Rule
 
-## Category Distribution (Target)
+When a post touches multiple areas:
 
-**Monthly (2 posts/month, ~12 posts/year):**
-- AI для бизнеса: 3-4 posts/year (25-30%)
-- IT-бизнес и digital-рынок: 3-4 posts/year (25-30%)
-- Веб и продукт: 2-3 posts/year (20%)
-- Разбор сильных идей: 2 posts/year (15%)
-- Практическое мышление: 2-3 posts/year (20%)
-
-*Flexible based on ideas and seasons*
-
----
-
-## Using Categories
-
-**When planning a post:**
-1. Identify which category your idea fits
-2. Check examples in that category
-3. Ensure it aligns with scope and audience
-4. Use category-specific voice and examples
-
-**For readers:**
-- Category filters on blog
-- Email digests by category (future)
-- Content strategy aligned with audience needs
-
----
-
-## Cross-Category Posts
-
-Some posts naturally fit multiple categories:
-- A post about SaaS UI might be both "IT-бизнес" + "Веб и продукт"
-- An AI automation post might be "AI для бизнеса" + "Практическое мышление"
-
-**Rule:** Pick ONE as primary for organization. Secondary tags can exist but primary category drives tone and depth.
+- choose the category that best describes the post's main promise to the reader
+- use tags for secondary context
+- do not force multi-category framing inside the post itself

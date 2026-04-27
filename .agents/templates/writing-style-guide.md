@@ -1,318 +1,138 @@
 # Writing Style Guide for YTDEV Blog
 
-**Based on analysis of 8 published/planned posts. Last updated: 2026-04-27**
-
----
+Based on the saved reference posts. Last updated: 2026-04-27.
 
 ## Core Writing DNA
 
-Your writing style can be distilled into 4 core elements:
+### 1. Personal And Systematic
 
-### 1. **Personal + Systematic**
-- Always ground ideas in personal experience or observation
-- But never stop at the personal — connect to larger systems
-- Example: "я делал валидацию" → RTB system analysis → personal realization
+- Start from experience, observation, or a concrete trigger.
+- Move from the personal layer to the system behind it.
+- Do not stop at storytelling when a deeper pattern can be shown.
 
-### 2. **Concrete Data Always**
-- Use specific numbers: "160 контактов", "96 человек в год", "11 покупок"
-- Never say "many", "some", "a lot" without backing
-- Numbers build credibility and make abstract ideas tangible
+### 2. Concrete Data
 
-### 3. **Honest About Failures**
-- Your bootcamp failed? Say it directly.
-- Show how you thought, where you were wrong, what you learned
-- Readers trust vulnerability more than perfection
+- Prefer real numbers over vague intensifiers.
+- Use dates, counts, budgets, durations, and ratios when they sharpen credibility.
+- A claim without a concrete anchor should be questioned.
 
-### 4. **Anti-Hype, Pro-Systems**
-- Reject: trends, viral moments, emotional manipulation, toxic productivity
-- Embrace: underlying patterns, long-term thinking, practical frameworks, systems analysis
+### 3. Honest Trade-Offs
 
----
+- Admit mistakes directly.
+- Show what was misunderstood, not only what was solved.
+- Let credibility come from honesty, not polish.
 
-## Post Type Patterns
+### 4. Anti-Hype Framing
 
-Based on your examples, you have 5 core post types:
+- Avoid product theatre, motivational language, and trend intoxication.
+- Prefer incentives, systems, trade-offs, and durable lessons.
 
-### **Type 1: Observation Essays (Long, Structured)**
-*Example: "5 результатов обучения в IT и не только"*
+## Core Post Types
 
-**Structure:**
-- Author credibility (facts about you, timeline)
-- Thesis (clearly stated concept)
-- 3-5 numbered sections, each with:
-  - Definition
-  - Real examples
-  - Practical application
-  - Quote or external reference
-- Conclusion with synthesis
+### Type 1: Long-Form Educational Post
 
-**Length:** 4,000-6,000 words / 6-8 min read
+Reference title:
 
-**Tone:** Expert, personal, methodical
+- "5 результатов обучения в IT и не только"
 
-**Best for:** Educational content, frameworks, systems analysis
+Best for:
 
-**Techniques:**
-- Use numbered sections (clarity + scannability)
-- Cite authorities (Гиппенрейтер, Амонашвили)
-- Use real stories with emotional weight
-- End with actionable synthesis
+- frameworks
+- teaching models
+- structured explanation with experience-backed sections
 
----
+### Type 2: Reflective Research Post
 
-### **Type 2: Personal Research Essays (Curious Exploration)**
-*Example: "Состояние за работой"*
+Reference title:
 
-**Structure:**
-- Personal observation that sparks curiosity
-- Exploration: what you found, how it works
-- Technical details (if relevant)
-- Personal meaning: how it affects you
-- Open question to reader
+- "Состояние за работой"
 
-**Length:** 1,500-3,000 words / 3-4 min read
+Best for:
 
-**Tone:** Curious, contemplative, first-person
+- curiosity-driven exploration
+- unusual discoveries
+- reflective first-person research
 
-**Best for:** Experiments, discoveries, unusual insights
+### Type 3: Technical Or System Analysis Post
 
-**Techniques:**
-- Let structure flow naturally (no artificial headers needed)
-- Include links and sources organically
-- Describe physical sensations (how music feels, how work state changes)
-- End with genuine question to audience
+Reference titles:
 
----
+- "Торговля вниманием пользователей"
+- "Как организовать сериализацию в Redux и избежать ошибки: non-serializable value"
 
-### **Type 3: System Analysis Essays (Reveal Hidden Pattern)**
-*Examples: "Торговля вниманием", "Как организовать сериализацию в Redux"*
+Best for:
 
-**Structure:**
-- Personal trigger: "недавно делал" or "я наткнулся на"
-- Thesis as reframe: show familiar thing in new way
-- Deep dive: explain the system/technical detail
-- Personal reaction: how you feel about this knowledge
-- Practical guidance: where to learn more / how to use it
+- hidden mechanics
+- technical problems with business or user consequences
+- problem -> explanation -> solution structures
 
-**Length:** 2,000-4,000 words / 4-6 min read
+### Type 4: Short-Form Market Or Reliability Post
 
-**Tone:** Informing, slightly cynical, practical
+Reference titles:
 
-**Best for:** Technical tutorials, market analysis, revealing hidden systems
+- "Рынок снова пошёл в минус"
+- "О взаимоотношениях, проектах и идеях"
 
-**Techniques:**
-- Start with "but actually..." to reframe
-- Use metaphors to make abstract concrete
-- Include code/technical examples (for technical posts)
-- End with invitation to reader to explore further
+Best for:
 
----
-
-### **Type 4: Micro-Wisdom (Distilled Observation)**
-*Example: "Рынок снова пошёл в минус", "О взаимоотношениях..."*
-
-**Structure:**
-- Observation from watching market/people
-- Pattern recognition: repeated cycles or truth
-- Wise conclusion: what this means
-- Optional: sharp counter-narrative
-
-**Length:** 300-800 words / 1-2 min read
+- distilled observations
+- market cycles
+- compact practical truths
 
-**Tone:** Cynical-but-wise, systems-thinking, poetic
-
-**Best for:** Market commentary, philosophical insights, distilled lessons
-
-**Techniques:**
-- Use metaphors: "тихо работает", "грабельный цикл"
-- Show cycles visually: "эйфория → страх → распродажа → новая эйфория"
-- Contrast common wisdom with truth
-- Short, punchy sentences with white space
-
----
-
-### **Type 5: Case Study / Failure Analysis**
-*Example: "Первый опыт. Большой факап"*
-
-**Structure:**
-- Honest title: name the failure
-- Context: what you tried, why, who was involved
-- The mistake: what went wrong, first lesson
-- The problem: what happened
-- The numbers: concrete data
-- The action: what you did
-- The reflection: what's next
-
-**Length:** 2,000-3,500 words / 4-5 min read
-
-**Tone:** Honest, reflective, practical
-
-**Best for:** Lessons learned, entrepreneurial/project experience, showing vulnerability
-
-**Techniques:**
-- Don't defend, don't make excuses, don't blame others
-- Use specific numbers (cost, contact count, purchase rate)
-- Show internal dialogue (what you thought at each step)
-- End with: will you try again? How would you change?
-
----
-
-## Voice Characteristics Across All Types
-
-### **What To Sound Like:**
-- ✅ Thinking out loud (but structured)
-- ✅ Experienced but always learning
-- ✅ Skeptical of hype but optimistic about systems
-- ✅ Personal without oversharing
-- ✅ Technical without jargon-overload
-- ✅ Direct and honest
-- ✅ Curious and exploratory
-
-### **What NOT To Sound Like:**
-- ❌ Robotic transitions ("Итак", "Таким образом", "Подводя итог")
-- ❌ Motivational preaching ("Верь в себя!", "Ты можешь!")
-- ❌ Generic wisdom ("В наше время...", "Как мы все знаем...")
-- ❌ Polished and perfect
-- ❌ Selling or convincing
-- ❌ Academic or overly formal
-- ❌ Fake urgency or artificial drama
+### Type 5: Postmortem Or Failure Post
 
----
+Reference title:
 
-## Sentence & Paragraph Level
+- "Первый опыт. Большой факап."
 
-### **Rhythm:**
-- Mix short and medium sentences, rarely long
-- Short sentences for emphasis or shift: "Это была первая ошибка."
-- Medium sentences (2-3 clauses) for explanation
-- Avoid long, nested constructions
+Best for:
 
-### **Paragraphs:**
-- Typical: 2-4 sentences
-- Range: 1-6 sentences
-- Short paragraphs = white space = breathing room = readability
-- Single-sentence paragraphs for emphasis:
-  > "С тобой хотят работать дальше."
+- failures
+- launch mistakes
+- lessons learned with numbers and context
 
-### **Transitions:**
-- Not: formalized connectors
-- Yes: natural flow, story progression, questions
-- Example: "И копнул чуть глубже, чем надо было" (natural, not "Более того")
+## Openings That Work
 
-### **Openings within sections:**
-- Start with something specific, not generic
-- Personal observation: "я довольно часто"
-- Concrete fact: "160 контактов с рекламы"
-- Reframe: "мы привыкли думать → на самом деле"
-- Never: "В наше время...", "Как известно..."
+- a direct observation from work
+- a personal experiment
+- a sharp reframe
+- a concrete failure or surprise
 
-### **Endings within sections:**
-- Call to action or question: "Расскажите пока, как у вас дела с AI?"
-- Wise observation: "Не самый эффектный навык. Но именно он почему-то решает всё."
-- Open loop: invitation to reader's thinking
-- Never: summary that just repeats
+Avoid generic scene-setting.
 
----
+## Endings That Work
 
-## Technical & Code Examples
+- a practical takeaway
+- a sharpened insight
+- a genuine question to the reader
+- a clear next-step reflection
 
-*When relevant (Type 3, Type 5)*
+Avoid inflated summaries that only restate the body.
 
-### **How to include code:**
-- Code should illustrate the point, not be the point
-- Always explain what the code does in words first
-- Use comments in code for clarity
-- Show progression: problem → attempt → solution
-- Real code (not over-simplified), but focused on the key lesson
+## Rhythm
 
-### **How to explain technical concepts:**
-1. Explain the WHY first (philosophy/principle)
-2. Then HOW (mechanism/system)
-3. Then practical USE (here's what to do)
+- short or medium paragraphs
+- medium sentence length with occasional short emphasis lines
+- visible breathing space
+- no academic padding
 
-Example from Redux post:
-- WHY: Redux values predictability and serialization
-- HOW: time-travel debugging, rehydration, SSR
-- USE: serialize with toSerializable() / fromSerializable()
+## Preferred Moves
 
----
+- use a reframe such as "people think X, but the system is actually Y"
+- connect technical detail to business, product, or human consequence
+- use questions as invitations, not tricks
+- keep the first-person voice natural
+- prefer clarity over stylistic ornament
 
-## Data & Credibility
+## Avoid
 
-### **How to use numbers:**
-- Specific: "160 контактов", not "many leads"
-- In context: "в среднем за год через мои занятия проходило 96 человек"
-- With source: "10 лет в сумме проработал в ИТ-образовании"
-- As proof: the Bootcamp post shows failure through numbers (11 vs 25 needed)
+- robotic transitions
+- hollow inspiration
+- false urgency
+- trend worship
+- polished corporate filler
+- fake certainty
 
-### **How to cite:**
-- Casually integrated: "как я узнал от..." or "вот один из простых разборов"
-- With links when relevant, not as footnotes
-- Credit originals: "Юлия Борисовна Гиппенрейтер" (name + role)
-- Don't over-cite; cite when it adds authority or credit
+## Final Test
 
-### **How to reference personal experience:**
-- Time frame: "12 лет в ИТ-образовании", "за всё время более 2-х лет"
-- Scale: "около 50 подростков", "многие сейчас учатся в технических вузах"
-- Outcome: show what happened next, not just what happened
-
----
-
-## Common Patterns in Your Writing
-
-### **Pattern 1: Observation → Reframe → Analysis → Wisdom**
-"Мы привыкли думать → На самом деле → Как это работает → Что это значит"
-
-### **Pattern 2: Personal Experience → Technique → Why It Works → Example**
-"Я делаю X → Это работает потому что → Вот как я это применил → Ученик начал..."
-
-### **Pattern 3: Problem → Deep Dive → Solution → Invitation to Discuss**
-"Ошибка в Redux → Почему это важно → Вот как решить → Поделитесь опытом"
-
-### **Pattern 4: Market/System Observation → Cycle Identification → Wise Conclusion**
-"Рынок делает X → Это повторяется (цикл) → А реальность работает иначе"
-
-### **Pattern 5: Failed Project → Honest Analysis → Learning → Will You Try Again?**
-"Запуск провалился → Вот почему → Вот числа → Да, снова, но по-другому"
-
----
-
-## What Makes Your Posts Memorable
-
-1. **Specific data points** — readers remember "160 контактов, 11 покупок"
-2. **Emotional honesty** — you admit what didn't work
-3. **Systems thinking** — you show patterns, not just events
-4. **Personal example without ego** — you learn alongside readers
-5. **Open-ended conclusions** — you invite thinking, not just agreement
-6. **Practical framework** — readers can apply it
-7. **Counter-intuitive insight** — "интернет это не контент, а рынок"
-
----
-
-## Monthly Writing Goals
-
-**For 2 posts/month (8,000-9,000 words total):**
-
-**Pace options:**
-- 1× Long Observation Essay (4,000-6,000 words, Type 1-2)
-- 1× System Analysis or Case Study (2,000-4,000 words, Type 3-5)
-
-Or:
-- 2× Medium Essays (3,500-4,000 words each)
-
-**Quality over volume:** Each post should be worth 6-8 minutes of focused reading and should contain at least one idea worth sharing.
-
----
-
-## Post Checklist (Before Publishing)
-
-- [ ] Does it have specific data or examples?
-- [ ] Is it grounded in personal experience or observation?
-- [ ] Does it show a system or pattern, not just a story?
-- [ ] Is the conclusion invitation or wisdom, not summary?
-- [ ] Are there any robotic transitions? (Remove them)
-- [ ] Any motivational clichés? (Remove them)
-- [ ] Does it answer: Why should someone care? Why now? What can they do?
-- [ ] Could a smart reader argue the opposite? (Good if yes — shows nuance)
-- [ ] Is the title specific and not clickbait?
-- [ ] Does it respect the reader's time?
+If the draft sounds like a clean summary of internet content, it is too generic. If it sounds like a thoughtful practitioner connecting experience, systems, and practical judgment, it is much closer to the target voice.

@@ -2,6 +2,12 @@
 
 This workflow is posts-only. It is designed for a content repository, not for application development.
 
+## Workspace Scope Rule
+
+- Execute the workflow only inside the current repository.
+- Do not switch to another local repository to resolve missing context.
+- If the current repo lacks required information, leave `TODO(USER): ...` or reference the missing mirrored document.
+
 ## Step 1. Fill Source Site List
 
 - Input: user-provided source sites and editorial boundaries

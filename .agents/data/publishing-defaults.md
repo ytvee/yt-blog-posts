@@ -61,7 +61,7 @@ Revisions happen in-place before publishing. Once `published: true`, the post is
 
 **Source attribution in posts:**
 
-For essays and opinion pieces based on external sources:
+For source-driven and opinion posts based on external sources:
 - Mention the original idea or source in the post body when relevant
 - Include links to source articles where appropriate
 - Credit authors and publications respectfully

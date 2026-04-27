@@ -1,217 +1,121 @@
 # Source Sites
 
-Approved sources for finding ideas, statistics, case studies, and inspiration for YTDEV Blog posts.
+Approved source map for YTDEV post discovery.
 
 Last updated: 2026-04-27
 
----
+## Core Sources
 
-## How to Use This List
+- site: `review.firstround.com`
+  role: founder, product, PMF, hiring, company-building
+  use for: AI operating reality, startup systems, product strategy, team lessons
+  fits: AI for Business; IT Business and the Digital Market; Breakdowns of Strong Ideas
 
-- **For post ideas:** Browse these sites when brainstorming topics
-- **For data & metrics:** Find real numbers and examples for posts
-- **For inspiration:** Read when stuck or seeking perspective
-- **For adaptation:** Find global ideas to adapt for Russian audience
-- **For frameworks:** Study how these sources present ideas
+- site: `stripe.com`
+  role: payments, billing, SaaS economics, monetization mechanics
+  use for: pricing, subscriptions, revenue logic, business infrastructure
+  fits: IT Business and the Digital Market; Web and Product Through Business and User Behavior; Practical Thinking
 
----
+- site: `intercom.com`
+  role: customer support systems, AI-first support, service operations
+  use for: AI in operations, support workflows, customer communication
+  fits: AI for Business; IT Business and the Digital Market; Web and Product Through Business and User Behavior
 
-## Product & SaaS Strategy
+- site: `vercel.com`
+  role: frontend platform, performance, developer workflow, product velocity
+  use for: web architecture with business consequences, delivery speed, product operations
+  fits: Web and Product Through Business and User Behavior; Practical Thinking
 
-- domain: https://review.firstround.com
-  category: Startup & Founder Strategy
-  language: English
-  topic fit: IT-бизнес, Практическое мышление
-  content types: Founder interviews, playbooks, strategy essays
-  update frequency: Multiple posts per week
-  notes: Exceptional founder interviews and strategic advice
+- site: `openai.com`
+  role: primary source for AI products, research, capabilities, limits, and platform direction
+  use for: AI shifts that affect products, teams, and business decisions
+  fits: AI for Business; Breakdowns of Strong Ideas
 
-- domain: https://stripe.com/
-  category: SaaS & Business
-  language: English
-  topic fit: IT-бизнес, Веб и продукт
-  content types: Business essays, case studies, guides
-  update frequency: Regular quality posts
-  notes: Great business thinking despite payment focus
+- site: `github.blog`
+  role: engineering workflow, platform changes, security, software collaboration
+  use for: developer systems, security posture, engineering process
+  fits: Web and Product Through Business and User Behavior; Practical Thinking
 
-- domain: https://intercom.com
-  category: Product Strategy
-  language: English
-  topic fit: Веб и продукт, Практическое мышление
-  content types: Product insights, design patterns, user research
-  update frequency: Regular posts
-  notes: Strong product and UX thinking
+- site: `blog.cloudflare.com`
+  role: infrastructure, performance, networking, AI traffic, security
+  use for: architecture with business impact, reliability, web performance
+  fits: Web and Product Through Business and User Behavior; Practical Thinking
 
-- domain: https://baymard.com/
-  category: UX Research
-  language: English
-  topic fit: Веб и продукт
-  content types: Research reports, data-driven insights
-  update frequency: Ongoing research updates
-  notes: Extensive e-commerce UX testing data
+## Strong Secondary Sources
 
-- domain: https://www.nngroup.com/articles
-  category: UX & Design Research
-  language: English
-  topic fit: Веб и продукт
-  content types: Research studies, best practices, case studies
-  update frequency: Regular articles
-  notes: Rigorous UX research methodology
+- site: `pragmaticengineer.com`
+  role: engineering organizations, software business, team operations
+  use for: engineering economics, delivery trade-offs, software business patterns
+  fits: IT Business and the Digital Market; Practical Thinking
 
----
+- site: `stratechery.com`
+  role: strategy, incentives, market structure, platform analysis
+  use for: business models, market moves, structural tech analysis
+  fits: IT Business and the Digital Market; Breakdowns of Strong Ideas; Practical Thinking
 
-## Engineering & Technical Leadership
+- site: `world.hey.com/dhh`
+  role: product philosophy, work philosophy, founder judgment
+  use for: anti-hype product thinking, time use, simplicity, strategic taste
+  fits: Practical Thinking; IT Business and the Digital Market
 
-- domain: https://vercel.com/
-  category: Frontend Infrastructure
-  language: English
-  topic fit: Веб и продукт, AI для бизнеса
-  content types: Technical guides, case studies, releases
-  update frequency: Regular posts and releases
-  notes: Next.js and developer experience focus
+- site: `world.hey.com/jason`
+  role: writing, product communication, business simplicity
+  use for: clarity, founder communication, practical work philosophy
+  fits: Practical Thinking; IT Business and the Digital Market
 
-- domain: https://blog.cloudflare.com
-  category: Infrastructure & Security
-  language: English
-  topic fit: Разбор сильных идей, Веб и продукт
-  content types: Technical deep-dives, case studies, announcements
-  update frequency: Regular posts
-  notes: Systems thinking and technical depth
+- site: `paulgraham.com/articles.html`
+  role: classic founder and thinking patterns
+  use for: durable startup lessons, independent thinking, deep posts
+  fits: Practical Thinking; Breakdowns of Strong Ideas
 
-- domain: https://github.blog
-  category: Developer Tools & AI
-  language: English
-  topic fit: AI для бизнеса, Разбор сильных идей
-  content types: News, announcements, product insights
-  update frequency: Regular posts
-  notes: Developer trends and AI developments
+- site: `taniarascia.com`
+  role: frontend, teaching, developer explainers
+  use for: clarity in technical writing, educational product thinking, web craft
+  fits: Web and Product Through Business and User Behavior; Breakdowns of Strong Ideas
 
-- domain: https://www.pragmaticengineer.com/
-  category: Engineering Culture & Career
-  language: English
-  topic fit: Практическое мышление, IT-бизнес
-  content types: Long-form essays, analysis, newsletters
-  update frequency: Regular newsletter + articles
-  notes: Career, culture, system design focus
+- site: `herbertograca.com`
+  role: architecture patterns, boundaries, maintainable software systems
+  use for: architecture judgment with business consequences
+  fits: Web and Product Through Business and User Behavior; Practical Thinking
 
-- domain: https://simpleprogrammer.com/resources/
-  category: Developer Learning & Growth
-  language: English
-  topic fit: Практическое мышление
-  content types: Guides, tutorials, essays
-  update frequency: Regular content
-  notes: Career and learning for developers
+- site: `baymard.com`
+  role: ecommerce UX and usability research
+  use for: checkout, search, filters, behavior-driven design decisions
+  fits: Web and Product Through Business and User Behavior; Breakdowns of Strong Ideas
 
-- domain: https://www.taniarascia.com
-  category: Learning & Teaching
-  language: English
-  topic fit: Практическое мышление, Разбор сильных идей
-  content types: Tutorials, essays, learning guides
-  update frequency: Regular posts
-  notes: Excellent on explaining and teaching technical concepts
+- site: `nngroup.com/articles`
+  role: usability research, mental models, information architecture
+  use for: user behavior, clarity, product interaction quality
+  fits: Web and Product Through Business and User Behavior; Breakdowns of Strong Ideas
 
-- domain: https://herbertograca.com
-  category: Software Architecture
-  language: English
-  topic fit: Веб и продукт, Разбор сильных идей
-  content types: Long-form architecture essays, patterns
-  update frequency: Regular posts
-  notes: Deep systems and architecture thinking
+## Scout Sources
 
----
+- site: `latent.space`
+  role: roundup and practitioner signal detector
+  use for: early theme discovery and follow-up sourcing
+  fits: AI for Business; Breakdowns of Strong Ideas
+  note: do not treat as a primary factual source when a stronger original source exists
 
-## AI & Technology News
+- site: `lunadio.com/blog`
+  role: bootstrapped SaaS, solo founders, launch experiments
+  use for: indie operating lessons, lightweight product experiments
+  fits: IT Business and the Digital Market; Practical Thinking
 
-- domain: https://openai.com/
-  category: AI Research & Models
-  language: English
-  topic fit: AI для бизнеса, Разбор сильных идей
-  content types: Model releases, research papers, blog posts
-  update frequency: Major announcements + research
-  notes: Official AI developments and capabilities
+- site: `simpleprogrammer.com/resources`
+  role: resource hub for developer learning and productivity
+  use for: selective discovery only
+  fits: Practical Thinking
+  note: low priority compared with the core sources above
 
-- domain: https://www.latent.space/p/ainews-ai-engineer-europe-2026
-  category: AI Ecosystem & Engineering
-  language: English
-  topic fit: AI для бизнеса, Практическое мышление
-  content types: Newsletter analysis, trends, ecosystem updates
-  update frequency: Regular newsletter
-  notes: AI engineer perspective and market analysis
+## Source Quality Rules
 
----
+- Priority 1: primary product sources, first-hand operator writing, durable research
+- Priority 2: strong practitioner blogs and founder writing
+- Priority 3: scout sources used only to find a better primary source
 
-## Business & Market Analysis
+## Usage Rules
 
-- domain: https://stratechery.com/
-  category: Tech Industry Analysis
-  language: English
-  topic fit: IT-бизнес, Практическое мышление
-  content types: Long-form analysis, trend essays
-  update frequency: Regular posts (subscription model)
-  notes: Deep market analysis and strategic thinking
-
-- domain: https://world.hey.com/jason
-  category: Founder Perspectives (Jason Fried)
-  language: English
-  topic fit: IT-бизнес, Практическое мышление
-  content types: Essays, opinions, contrarian views
-  update frequency: Irregular but high-quality
-  notes: Basecamp founder on business and product
-
-- domain: https://world.hey.com/dhh
-  category: Founder Perspectives (DHH)
-  language: English
-  topic fit: IT-бизнес, Практическое мышление
-  content types: Essays, technical perspectives, business philosophy
-  update frequency: Irregular but high-quality
-  notes: DHH on business, technology, and independence
-
-- domain: https://paulgraham.com/articles.html
-  category: Startup & Life Essays
-  language: English
-  topic fit: IT-бизнес, Практическое мышление
-  content types: Essays, insights, pattern recognition
-  update frequency: Occasional but classic essays
-  notes: Timeless founder and investor perspective
-
-- domain: https://www.lunadio.com/blog/
-  category: B2B SaaS & Analytics
-  language: English
-  topic fit: IT-бизнес, Веб и продукт
-  content types: Case studies, data-driven analysis
-  update frequency: Regular posts
-  notes: Data and metrics for SaaS products
-
----
-
-## Research Workflow
-
-**When planning a post:**
-1. Identify relevant category from blog-categories.md
-2. Browse 2-3 sources from this list in that category
-3. Read 3-5 related articles
-4. Extract data, quotes, frameworks
-5. Identify unique angle for adaptation
-6. Reframe for Russian/CIS audience
-7. Write post with adapted insights
-
----
-
-## Quick Category Lookup
-
-**For AI posts:** OpenAI, Latent Space, GitHub Blog
-**For Business lessons:** First Round Review, Stratechery, Paul Graham
-**For Product thinking:** Intercom, Stripe, Nielsen Norman, Baymard
-**For Technical depth:** Cloudflare, Herberto Graça, Pragmatic Engineer
-**For Learning patterns:** Tania Rascia, Simple Programmer, Paul Graham
-**For Market analysis:** Stratechery, DHH, Jason Fried
-
----
-
-## Notes
-
-- Total approved sources: 16
-- All sources are high-quality, regularly updated
-- All are accessible without paywall (except Stratechery newsletter)
-- Languages: English (primary), some founder essays have varying styles
-- Update frequency: Mix of regular posts, newsletters, and occasional essays
+- Prefer rare, useful, high-signal material over generic news.
+- Use scout sources only to discover stronger originals.
+- Build posts around ideas, systems, and business consequences, not around source prestige alone.
+- Keep source facts separate from editorial interpretation.
