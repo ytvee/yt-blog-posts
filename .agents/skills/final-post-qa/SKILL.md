@@ -15,6 +15,7 @@ Run the last pre-publish review on a post draft.
 - `.agents/project/10-post-content-contract.md`
 - `.agents/project/50-output-contracts.md`
 - `.agents/project/60-final-qa-gates.md`
+- `.agents/data/valid-writing-patterns.md`
 - `.agents/data/banned-ai-patterns.md`
 - `.agents/templates/qa-report-template.md`
 

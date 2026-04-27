@@ -21,6 +21,7 @@ Use this checklist before returning a final markdown post.
 - Remove inflated summaries that say little.
 - Remove robotic transitions.
 - Remove conclusion formulas that sound machine-generated.
+- Check against `.agents/data/valid-writing-patterns.md` for positive constraints when it is populated.
 - Check against `.agents/data/banned-ai-patterns.md`.
 
 ## Structure And Readability

@@ -26,6 +26,8 @@ Read these files before doing content work:
 - `.agents/project/80-redeploy-workflow.md`
 - `.agents/templates/writing-style-guide.md`
 - `.agents/data/brand-profile.md`
+- `.agents/data/valid-writing-patterns.md`
+- `.agents/data/banned-ai-patterns.md`
 - `.agents/data/blog-categories.md`
 - `.agents/data/source-sites.md`
 - `.agents/data/style-examples-index.md`
