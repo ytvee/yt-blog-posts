@@ -7,9 +7,12 @@ Read these files before doing content work:
 - `.agents/project/00-repo-purpose.md`
 - `.agents/project/10-post-content-contract.md`
 - `.agents/project/20-writing-workflow.md`
+- `.agents/project/40-style-profile.md` — detailed style profile based on examples
 - `.agents/project/50-output-contracts.md`
 - `.agents/project/60-final-qa-gates.md`
 - `.agents/project/70-sync-with-blog-app.md`
+- `.agents/templates/writing-style-guide.md` — comprehensive guide to your writing voice and post types
+- `.agents/data/style-examples-index.md` — index of 8 published posts with analysis
 
 Use these skills when relevant:
 
@@ -38,6 +41,7 @@ A task is done only when all of the following are true:
 - keep one markdown file per post under `content/`
 - leave explicit `TODO(USER): ...` markers where user input is required
 - keep outputs practical, reviewable, and easy to edit by hand
+- use the brand profile (`.agents/data/brand-profile.md`) and style guide (`.agents/templates/writing-style-guide.md`) for all content decisions
 
 ## Do Not
 
