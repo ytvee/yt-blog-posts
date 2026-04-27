@@ -160,6 +160,63 @@ If a draft contains three or four of these signs, rewrite it:
 - too many connective words and too little thought
 - a sense that the text was carefully manufactured instead of precisely said
 
+## Banned Research-Heavy Structure
+
+Do not build every section using the same mechanical formula:
+
+> тезис → источник → интерпретация → обобщающая фраза
+
+This pattern creates the appearance of an analytical compilation, not a live essay. Avoid making each block sound like a mini-report. Structure should vary:
+
+- sometimes start with observation, sometimes with doubt
+- sometimes with personal inference, sometimes with contrast
+- sometimes with a concrete scene, sometimes with abstraction
+
+Do not require every section to:
+- state a thesis first
+- confirm it with a source
+- explain its meaning
+- close with a polished conclusion
+
+The text should sound like an author thinking on the page, not a model assembling an analytical report.
+
+## Banned English Term Saturation
+
+Do not pack the text with untranslated English terms, especially if they look imported from research or AI summaries.
+
+Avoid excessive use of borrowed terms:
+
+- output, summary, cleanup
+- verification debt, decision overload
+- AI brain fry, workslop, agentic coding
+- AI workflows, workslop, async patterns
+
+If a term is necessary, introduce it naturally and explain it in human language. Do not turn the text into a collection of trendy concepts.
+
+Bad: `В AI-workflows возникает verification debt из-за workslop и decision overload.`
+
+Better: `Команда начинает тонуть в черновиках, которые вроде бы выглядят готовыми, но требуют всё больше проверки.`
+
+Use Russian formulations when they sound more alive and precise than English imports.
+
+## Banned Repetitive Rhetorical Patterns — Strictly Forbidden
+
+Do not repeat the same connective structures and rhythmic moves. Especially forbidden:
+
+- "Проблема не в том… проблема в том…"
+- "Это важная мысль."
+- "Дальше хуже."
+- "На уровне организаций…" / "На соседнем уровне…"
+- "То есть…"
+- "Именно поэтому…"
+- "Если убрать маркетинг…"
+- "Суть простая…"
+- "Всё это показывает…"
+
+Do not make text too smooth, symmetrical, and predictable. Do not close every paragraph with a strong summarizing phrase. Do not use identical syntax in adjacent paragraphs.
+
+Requirement: each section must have its own rhythm. Sometimes short phrases, sometimes long reasoning, sometimes a personal remark, sometimes a dry observation. The text should sound like a person thinking on the page, not like a model assembling a persuasive response.
+
 ## What To Prefer Instead
 
 - a concrete observation instead of a generic thesis
@@ -168,6 +225,8 @@ If a draft contains three or four of these signs, rewrite it:
 - a real trade-off instead of a moral
 - an exact remark instead of a universal recommendation
 - authorial tone instead of neutral explanation
+- varied rhythm: short and long sentences mixed, different paragraph structures
+- personal doubt or caution instead of confident universal claims
 
 ## Final Self-Check
 
