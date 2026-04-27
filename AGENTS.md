@@ -7,6 +7,7 @@ Read these files before doing content work:
 - `.agents/project/00-repo-purpose.md`
 - `.agents/project/10-post-content-contract.md`
 - `.agents/project/20-writing-workflow.md`
+- `.agents/project/22-idea-generation-with-sources.md` — how to generate post ideas grounded in source monitoring
 - `.agents/project/40-style-profile.md` — detailed style profile based on examples
 - `.agents/project/50-output-contracts.md`
 - `.agents/project/60-final-qa-gates.md`
