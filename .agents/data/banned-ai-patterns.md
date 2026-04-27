@@ -41,6 +41,7 @@ Do not use stock LLM transitions:
 - `Тем не менее важно отметить...`
 - `Это не просто X, а Y`
 - `Речь идет не только о..., но и о...`
+- `не только X, но и Y` (especially when reinforcing a thought with two equal parts—makes observation sound manufactured)
 - `Именно здесь кроется ключевой момент`
 - `На самом деле все гораздо глубже`
 - `Это открывает новые возможности`
@@ -114,12 +115,18 @@ The text should sound like observation, inference, experience, or position, not 
 Do not build paragraphs around too many neat binary formulas:
 
 - `Это не X. Это Y.`
+- `Ты не просто X, а Y.`
 - `Дело не в X, а в Y.`
 - `Вопрос не в том, чтобы..., а в том, чтобы...`
 - `Не потому что..., а потому что...`
 - `Суть не в..., суть в...`
+- `X — не Y, а Z` (causal reshuffling: "не от сложности, а от слоя управления")
+- `X — не только Y, но и Z` (expansion rhetoric that sounds editorial)
+- `главный/ключевой X... не только Y, но и Z` (reinforcement with two-part emphasis)
 
 These patterns are occasionally acceptable, but repeated use makes the text sound machine-produced.
+
+The "не только...но и" construction is especially risky when used to reinforce or expand a thought with two balanced parts—it creates false symmetry that makes the idea sound more manufactured than observed. Similarly, the "не...а" structure reshuffles causes or attributes in ways that sound editorial rather than observed.
 
 ## Banned Endings
 
