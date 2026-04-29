@@ -77,12 +77,31 @@ The result must be:
 - materially shorter than the original
 - useful on its own
 - adapted for Astana Hub readers
+- built around one meaningful slice of the original article
+- complete as one thought, but not complete as a substitute for the full article
 
 The result must not be:
 
 - a full repost of the blog article
 - a mechanical compression of every section
 - a near-duplicate of the original text
+- an advertisement for the original article
+
+## Output Format
+
+The Astana Hub draft must be written in markdown.
+
+Markdown here is the repository storage format for the draft, even if the platform editor later requires manual paste or cleanup.
+
+Each Astana Hub draft must also include `5` title variants after the article body is written.
+
+Title rules:
+
+- all `5` titles must be specific to the actual draft, not generic placeholders
+- titles must match the user's style and the anti-hype tone of the repository
+- titles must avoid clickbait and ad-like wording
+- titles must point to the same core idea, but with slightly different framing
+- at least one title should be the most neutral and publication-safe option
 
 ## Length Default
 
@@ -101,12 +120,18 @@ Recommended structure for the adapted draft:
 1. A strong practical lead with the main observation or tension.
 2. `2-4` short paragraphs that explain one key idea, trade-off, or implication.
 3. One compact closing takeaway for founders, builders, or operators.
-4. A soft CTA or reading bridge.
+4. A soft reading bridge to the full article without turning the post into promotion.
 5. A mandatory original-link line at the end.
 
 Do not reproduce the source post section by section.
 
 The draft should carry one main idea, not the full argument tree of the original article.
+
+Working rule:
+
+- pick one valuable meaning block from the source article
+- finish that block as a standalone insight
+- stop before recreating the whole article structure
 
 ## Tone
 
@@ -126,14 +151,40 @@ The tone should not be:
 - overly polished
 - slogan-driven
 - written as engagement bait
+- sales-like
 
 Prefer clear observations, operational implications, and honest trade-offs.
+
+## Style Alignment With Repository Rules
+
+Every Astana Hub draft must follow the active writing guidance from this repository, not only the platform profile.
+
+Required style sources:
+
+- `.agents/project/40-style-profile.md`
+- `.agents/templates/writing-style-guide.md`
+- `.agents/data/banned-ai-patterns.md`
+- `.agents/data/valid-writing-patterns.md` when it is filled later
+
+Practical requirement:
+
+- the Astana Hub draft must read like a live authorial note, not like a polished LLM summary
+- start from observation, experience, or a concrete practical tension when possible
+- keep the rhythm uneven in a natural way; do not make every paragraph the same size or function
+- prefer one sharp concrete detail over several abstract claims
+- keep English terms to the minimum needed for clarity
+- respect the user's anti-hype, practical, system-oriented voice even inside short-form limits
+
+Mandatory anti-pattern rule:
+
+- if the draft sounds like it could be pasted into dozens of generic AI or business posts without changing much, rewrite it
+- if the draft relies on stock rhetorical symmetry, teacher voice, decorative connectors, or polished filler, rewrite it
 
 ## Original Link Rule
 
 Every Astana Hub adaptation must end with a direct original-link line in this exact format:
 
-`Original: https://www.ytdev.me/blog/<slug>`
+`Оригинальная статья: https://www.ytdev.me/blog/<slug>`
 
 Rules:
 
@@ -196,6 +247,30 @@ When compressing a long blog post into Astana Hub format, preserve in this order
 
 Drop supporting detail before dropping the main practical point.
 
+## Internal Link Pass
+
+After drafting the Astana Hub post, the agent must scan all existing markdown posts in `content/`.
+
+Goal:
+
+- check whether there is an older post on the blog that genuinely strengthens the current Astana Hub draft
+
+If a relevant older post exists:
+
+- add a natural link to that older post inside the Astana Hub draft
+- use the older link only when it adds real context, comparison, or continuation
+
+If no relevant older post exists:
+
+- do not force an internal link
+
+Rules:
+
+- prefer at most one older internal blog link
+- the older link must support the current idea, not distract from it
+- the original article link at the end remains mandatory even when an older internal link is added
+- never invent missing blog URLs; derive them from existing `content/<slug>.md` files
+
 ## Hard Prohibitions
 
 Do not:
@@ -207,6 +282,7 @@ Do not:
 - promise unverified outcomes
 - inflate weak evidence into certainty
 - turn the post into generic motivation
+- use the post mainly as a teaser ad without standalone value
 
 ## Practical Use Rule
 
