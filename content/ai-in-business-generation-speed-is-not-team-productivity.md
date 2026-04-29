@@ -2,7 +2,7 @@
 title: "ИИ в бизнесе: скорость генерации — это ещё не продуктивность команды"
 date: "2026-04-27"
 description: "Как ИИ ускоряет генерацию, почему это не всегда продуктивность и откуда берутся скрытая работа, ошибки и риски."
-readingTime: 8
+readingTime: 7
 published: true
 tags: ["ai", "ии в бизнесе", "продукт", "операционная эффективность"]
 ogImage: "../media/ai-in-business-generation-speed-is-not-team-productivity-cover.png"
