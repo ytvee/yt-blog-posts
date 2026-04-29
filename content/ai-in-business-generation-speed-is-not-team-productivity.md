@@ -5,6 +5,7 @@ description: "Как ИИ ускоряет генерацию, почему эт
 readingTime: 8
 published: true
 tags: ["ai", "ии в бизнесе", "продукт", "операционная эффективность"]
+ogImage: "../media/ai-in-business-generation-speed-is-not-team-productivity-cover.png"
 ---
 ## Когда команда начинает выпускать больше, но не обязательно работать лучше
 
