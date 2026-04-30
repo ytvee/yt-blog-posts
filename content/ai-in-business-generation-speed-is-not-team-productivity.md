@@ -9,7 +9,7 @@ ogImage: "../media/ai-in-business-generation-speed-is-not-team-productivity-cove
 ---
 ## Когда команда начинает выпускать больше, но не обязательно работать лучше
 
-![1777311426203](../media/ai-in-business-generation-speed-is-not-team-productivity-cover.png)
+![1777311426203](../media/ai-in-business-generation-speed-is-not-team-productivity-cover.webp)
 
 Мне кажется, один из самых опасных самообманов вокруг ИИ сейчас звучит очень привлекательно: если команда стала выпускать больше, значит, она стала продуктивнее.
 
