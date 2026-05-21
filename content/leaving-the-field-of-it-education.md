@@ -5,7 +5,7 @@ description: "asd"
 tags: ["asd", "2", "2", "2", "2"]
 readingTime: 6
 ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390106/cover_j7urb6.webp"
-published: true
+published: false
 ---
 ![education-hero](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390310/hero_fxxohe.webp)
 
