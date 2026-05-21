@@ -4,10 +4,10 @@ date: "2024-04-22"
 description: "asd"
 tags: ["asd", "2", "2", "2", "2"]
 readingTime: 6
-ogImage: "../media/it-edu-years/cover.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390106/cover_j7urb6.webp"
 published: true
 ---
-![education-hero](../media/it-edu-years/hero.webp)
+![education-hero](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390310/hero_fxxohe.webp)
 
 *Приветствую, дорогой читатель. Начну с момента, как я попал в эту сферу, расскажу, какие у меня сформировались цели, что эта сфера дала лично мне и почему я решил сменить направление. Так что можете заварить себе чай, если вы ещё не сделали этого. Рад провести время в беседе с вами!*
 
@@ -87,24 +87,25 @@ published: true
 
 12 лет — это был огромный путь. Он сделал меня другим человеком. И за это я благодарен. Осталась куча отзывов и памятных моментов. Ценю.
 
+![education-feedback-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390311/1_c2gihk.webp)
+
+![education-feedback-9](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390308/9_l6rddu.webp)
+
+![education-feedback-3](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390313/3_sza33w.webp)
+
+![education-feedback-4](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390302/4_nbo7qe.webp)
+
+![education-feedback-2](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390312/2_lupnzu.webp)
+
+![education-feedback-5](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390303/5_ehgdjk.webp)
+
+![education-feedback-6](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390305/6_b7ij9o.webp)
+
+![education-feedback-8](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390307/8_kcanr0.webp)
+
+![education-feedback-7](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390306/7_cnial7.webp)
+
 ![education-feedback-1](../media/it-edu-years/1.webp)
 
-![education-feedback-9](../media/it-edu-years/9.webp)
+![education-feedback-10](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390310/10_qopbbo.webp)
 
-![education-feedback-3](../media/it-edu-years/3.webp)
-
-![education-feedback-4](../media/it-edu-years/4.webp)
-
-![education-feedback-2](../media/it-edu-years/2.webp)
-
-![education-feedback-5](../media/it-edu-years/5.webp)
-
-![education-feedback-6](../media/it-edu-years/6.webp)
-
-![education-feedback-8](../media/it-edu-years/8.webp)
-
-![education-feedback-7](../media/it-edu-years/7.webp)
-
-![education-feedback-1](../media/it-edu-years/1.webp)
-
-![education-feedback-10](../media/it-edu-years/1.webp)

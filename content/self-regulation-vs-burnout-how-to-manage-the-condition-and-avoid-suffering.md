@@ -4,10 +4,10 @@ date: "2024-04-16"
 description: "Профессиональное и эмоциональное выгорание (зачеркнуто): саморегуляция и внимание к себе - как 5 шагов внутренней работы возвращают энергию."
 tags: ["саморегуляция", "выгорание", "эмоциональное выгорание", "управление состоянием", "внутренняя энергия", "стрессоустойчивость", "саморефлексия", "осознанность", "продуктивность", "тайм-менеджмент", "внутренняя опора", "внимание к себе"]
 readingTime: 20
-ogImage: "../media/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390123/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering_y6sstd.webp"
 published: true
 ---
-![self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering](../media/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering.webp)
+![self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390123/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering_y6sstd.webp)
 
 ## Почему это важнее любого тайм-менеджмента
 
@@ -66,7 +66,7 @@ published: true
 
 Мы пытаемся изменить поведение, не замечая состояния. Пытаемся изменить результат, не замечая мышления. Пытаемся стать эффективнее, не замечая, что внутри уже давно идёт скрытая утечка энергии. Мы работаем с надводной частью айсберга и удивляемся, почему он не меняет направление.
 
-![under-water](../media/underwater.webp)
+![under-water](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390281/underwater_jkomtx.webp)
 
 ## Процессы
 
