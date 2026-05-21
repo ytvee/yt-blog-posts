@@ -53,7 +53,7 @@ published: false
 Я до сих пор помню учителей из своего детства. Их можно пересчитать по пальцам одной руки. Но эти люди — те, чьё присутствие в моём образовании я вспоминаю с огромной благодарностью. Именно они задали мне ориентир.
 
 <video controls preload="metadata" width="100%">
-  <source src="../media/it-edu-years/jasakids.mp4" type="video/mp4" />
+  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389761/jasakids_ixnrjd.mp4" type="video/mp4" />
 </video>
 
 Когда я сам начал преподавать, решил: хочу быть таким же. Не «ещё одним преподом-теоретиком», не высокомерным наставником, а человеком, который останется в памяти, когда ребята повзрослеют. Которого будут вспоминать с теплом.
@@ -63,7 +63,7 @@ published: false
 И знаете, это было увлекательно.
 
 <video controls preload="metadata" width="100%">
-  <source src="../media/it-edu-years/online.mp4" type="video/mp4" />
+  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389763/online_zz4117.mp4" type="video/mp4" />
 </video>
 
 На занятиях мы проживали целый спектр эмоций: радость, азарт, злость, смех, иногда даже слёзы. В лагерях — ещё больше. Всё это — кладезь моментов, которые остаются внутри и делают жизнь объёмнее.
@@ -77,7 +77,7 @@ published: false
 И вот в 2023 году я чувствую: силы отпустить наконец появились.
 
 <video controls preload="metadata" width="100%">
-  <source src="../media/it-edu-years/five.mp4" type="video/mp4" />
+  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389760/five_hs5bp5.mp4" type="video/mp4" />
 </video>
 
 Пару лет я пытался полностью переключиться в другую деятельность, но только в 2025 это стало ощущаться естественно.
