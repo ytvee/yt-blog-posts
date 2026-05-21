@@ -5,7 +5,7 @@ description: "asd"
 tags: ["asd", "2", "2", "2", "2"]
 readingTime: 6
 ogImage: "../media/it-edu-years/cover.webp"
-published: true
+published: false
 ---
 ![education-hero](../media/it-edu-years/hero.webp)
 
