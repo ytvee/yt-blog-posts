@@ -1,8 +1,8 @@
 ---
 title: "12 лет в сфере образования и уход из нее"
 date: "2024-04-22"
-description: ""
-tags: ["", "", "", "", "", "", "", "", "", "", "", ""]
+description: "asd"
+tags: ["asd", "2", "2", "2", "2"]
 readingTime: 6
 ogImage: "../media/it-edu-years/cover.webp"
 published: true
