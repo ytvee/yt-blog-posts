@@ -1,4 +1,4 @@
-name: Redeploy blog on Vercel
+name: Redeploy blog on Railway
 
 on:
   push:
@@ -13,16 +13,19 @@ concurrency:
 jobs:
   redeploy:
     runs-on: ubuntu-latest
+    container: ghcr.io/railwayapp/cli:latest
+    env:
+      RAILWAY_SERVICE_NAME: yt-blog
     steps:
-      - name: Trigger Vercel Deploy Hook
+      - name: Redeploy Railway service
         env:
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
-            echo "Missing required secret: VERCEL_DEPLOY_HOOK_URL"
+          if [ -z "$RAILWAY_TOKEN" ]; then
+            echo "Missing required secret: RAILWAY_TOKEN"
             exit 1
           fi
 
-          curl --fail-with-body --silent --show-error \
-            --request POST \
-            "$VERCEL_DEPLOY_HOOK_URL"
+          railway redeploy \
+            --service "$RAILWAY_SERVICE_NAME" \
+            --yes
