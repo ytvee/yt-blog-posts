@@ -64,6 +64,17 @@ Examples:
 - false urgency
 - corporate polish
 
+## Mandatory Pattern Gate
+
+Before returning any draft, revision, or final markdown:
+
+- apply `.agents/data/valid-writing-patterns.md`
+- apply `.agents/data/banned-ai-patterns.md`
+- load focused anti-AI references only for risks visible in the current text
+- rewrite text that fails the gate instead of only reporting the problem
+
+The style target is not "smooth Russian article prose". The target is a practical authorial post with concrete observation, useful skepticism, varied rhythm, and a real point of view.
+
 ## Language Expectations
 
 - write all operational guidance in English

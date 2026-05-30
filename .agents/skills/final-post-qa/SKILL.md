@@ -17,6 +17,7 @@ Run the last pre-publish review on a post draft.
 - `.agents/project/60-final-qa-gates.md`
 - `.agents/data/valid-writing-patterns.md`
 - `.agents/data/banned-ai-patterns.md`
+- `.agents/skills/enforce-writing-style/SKILL.md`
 - `.agents/templates/qa-report-template.md`
 
 ## Outputs
@@ -27,14 +28,16 @@ Run the last pre-publish review on a post draft.
 ## Procedure
 
 1. Check factual sanity.
-2. Check language quality and anti-AI phrasing.
+2. Check language quality, positive-pattern compliance, and anti-AI phrasing.
 3. Check structure, headings, and readability.
-4. When the article text is final, calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`.
-5. Validate frontmatter and media expectations.
-6. Report blockers or confirm readiness.
+4. Treat failed style-gate checks as blocking.
+5. When the article text is final, calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`.
+6. Validate frontmatter and media expectations.
+7. Report blockers or confirm readiness.
 
 ## Must Not
 
 - do not mark a post ready if blocking checks fail
 - do not include QA commentary in the final markdown output
 - do not ignore placeholder values or invalid dates
+- do not ignore failed pattern compliance or anti-AI checks

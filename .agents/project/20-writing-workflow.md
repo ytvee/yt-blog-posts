@@ -52,6 +52,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: Russian working notes and style profile from `.agents/project/40-style-profile.md`
 - Action: rewrite the material into the user's style constraints
+- Action: apply `.agents/data/valid-writing-patterns.md` and `.agents/data/banned-ai-patterns.md`; load focused anti-AI references only when needed
 - Output: style-adapted draft outline or draft body
 - Stop condition: the draft reads like an authored post rather than a translated article
 - What must not be done: do not invent style preferences; if style data is missing, leave `TODO(USER): ...` and state the gap
@@ -60,6 +61,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: style-adapted material and post contract
 - Action: assemble a markdown post draft using the templates and mirrored contract
+- Action: run the style gate from `.agents/skills/enforce-writing-style/SKILL.md`
 - Output: draft in the format from `.agents/templates/post-draft-template.md`
 - Stop condition: a reviewable draft exists with valid structure
 - What must not be done: do not mark the post final before review; do not leave publish-facing placeholders
@@ -76,6 +78,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: current draft and revision instructions
 - Action: update the draft without breaking the contract or markdown structure
+- Action: re-run positive-pattern and anti-AI checks on changed sections and adjacent paragraphs
 - Output: revised draft and revision report
 - Stop condition: the draft reflects the user's feedback
 - What must not be done: do not damage headings, frontmatter, links, or media while revising
@@ -84,6 +87,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: revised draft and `.agents/project/60-final-qa-gates.md`
 - Action: perform the full pre-publish check
+- Action: treat failed positive-pattern or anti-AI checks as blocking language-quality failures
 - Action: once the article text is final, calculate `readingTime` with `python3 scripts/calc_reading_time.py content/<slug>.md`
 - Output: QA report in the format from `.agents/templates/qa-report-template.md`
 - Stop condition: all blocking checks pass or are explicitly flagged

@@ -13,21 +13,31 @@ Every prompt must be interpreted only inside the currently open project workspac
 
 ## Required Reading Order
 
-Read these files before doing content work:
+Always start with the context-optimized map:
+
+- `.agents/SUMMARY.md`
+
+For any post drafting, revision, adaptation, source, or QA task, read this required minimum:
 
 - `.agents/project/00-repo-purpose.md`
 - `.agents/project/10-post-content-contract.md`
 - `.agents/project/20-writing-workflow.md`
-- `.agents/project/22-idea-generation-with-sources.md`
-- `.agents/project/40-style-profile.md`
 - `.agents/project/50-output-contracts.md`
 - `.agents/project/60-final-qa-gates.md`
-- `.agents/project/70-sync-with-blog-app.md`
-- `.agents/project/80-redeploy-workflow.md`
-- `.agents/templates/writing-style-guide.md`
-- `.agents/data/brand-profile.md`
 - `.agents/data/valid-writing-patterns.md`
 - `.agents/data/banned-ai-patterns.md`
+
+Then load task-specific references from `.agents/SUMMARY.md`.
+
+Read deeper references only when the task needs them:
+
+- source discovery and article ingestion: `.agents/project/22-idea-generation-with-sources.md`, `.agents/project/30-source-research-policy.md`, `.agents/data/source-sites.md`, `.agents/data/blog-categories.md`
+- drafting and style work: `.agents/project/40-style-profile.md`, `.agents/templates/writing-style-guide.md`, `.agents/data/brand-profile.md`, focused anti-AI reference files listed in `.agents/data/banned-ai-patterns.md`
+- sync and redeploy work: `.agents/project/70-sync-with-blog-app.md`, `.agents/project/80-redeploy-workflow.md`
+- platform adaptation: relevant `.agents/data/social-platform-*.md` profile
+
+Use these shared data references when the task needs them:
+
 - `.agents/data/blog-categories.md`
 - `.agents/data/source-sites.md`
 - `.agents/data/style-examples-index.md`
@@ -38,6 +48,7 @@ Use these skills when relevant:
 - `.agents/skills/ingest-source-article/SKILL.md`
 - `.agents/skills/build-style-profile/SKILL.md`
 - `.agents/skills/adapt-to-style/SKILL.md`
+- `.agents/skills/enforce-writing-style/SKILL.md`
 - `.agents/skills/revise-draft/SKILL.md`
 - `.agents/skills/final-post-qa/SKILL.md`
 
@@ -77,6 +88,7 @@ Agents must calculate `readingTime` with the repository script, not by guessing.
 - leave explicit `TODO(USER): ...` markers where user input is required
 - keep outputs practical, reviewable, and easy to edit by hand
 - use the brand profile, category map, source map, and style guide for all editorial decisions
+- always enforce `.agents/data/valid-writing-patterns.md` and `.agents/data/banned-ai-patterns.md` before returning drafts, revisions, adaptations, or final markdown
 
 ## Do Not
 

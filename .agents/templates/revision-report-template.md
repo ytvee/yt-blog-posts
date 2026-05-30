@@ -15,5 +15,7 @@
 - Frontmatter:
 - Structure:
 - Tone alignment:
+- Pattern compliance:
+- Anti-AI blockers:
 - Media references:
 ```

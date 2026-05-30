@@ -1,241 +1,57 @@
 # Anti-AI Writing Guardrails
 
-Use this file during drafting, revision, and final QA to catch LLM-sounding phrasing, pacing, and rhetoric.
+This is the mandatory quick gate for drafting, revision, platform adaptation, and final QA.
+
+Agents must load this file together with `.agents/data/valid-writing-patterns.md` before returning Russian-language prose.
 
 ## Main Goal
 
-Write in a way that sounds like a live authorial post, not a smoothed LLM draft.
+Write like a live author with experience, taste, and a point of view.
 
-Do not use wording, rhythm, metaphors, or connective tissue that make the text sound like a typical GPT or Claude output: too polished, too safe, impersonal, and abstractly "smart" without lived observation, friction, or authorial stance.
+Do not produce text that feels like a smoothed LLM draft: too polished, too safe, impersonal, abstractly "smart", or full of connective tissue without lived observation.
 
-The post should read like it was written by a person with experience, taste, and a point of view, not by a universal "well-written article" machine.
+## Blocking Anti-Patterns
 
-## Banned Openings
+Rewrite the text if it contains any of these risks in a visible way:
 
-Do not start posts with these constructions or close variants:
+- generic opening that could fit hundreds of other posts
+- stock LLM transition or connector
+- empty business or technology abstraction
+- decorative metaphor not tied to a concrete observation
+- teacher voice instead of authorial position
+- repeated `not X, but Y` or `not only X, but also Y` symmetry
+- section rhythm that repeats the same thesis/source/interpretation/summary formula
+- generic ending that only inflates the article instead of landing the idea
+- excessive untranslated English terms when Russian wording is clearer
 
-- `В современном мире...`
-- `Сегодня как никогда...`
-- `С каждым днем становится все очевиднее...`
-- `Нельзя отрицать, что...`
-- `Ни для кого не секрет, что...`
-- `Важно понимать, что...`
-- `Стоит отметить, что...`
-- `Следует отметить, что...`
-- `Давайте разберемся...`
-- `В этой статье мы рассмотрим...`
-- `Поговорим о том, почему...`
-- `Искусственный интеллект стремительно меняет...`
-- `Технологии уже не просто инструмент, а...`
+## Mandatory Quick Check
 
-If the first paragraph could be inserted into a thousand other posts without loss, rewrite it.
+Before returning any draft, revision, adaptation, or final QA result, answer these checks:
 
-## Banned Transitions And Connectors
+1. Does the opening begin from a concrete observation, experience, tension, number, or precise reframe?
+2. Does the text contain enough concrete detail to prove a person is thinking through the topic?
+3. Are transitions created by the argument itself rather than generic connector phrases?
+4. Do sections vary in rhythm and structure?
+5. Does the ending add a concrete landing thought instead of a universal summary?
 
-Do not use stock LLM transitions:
+If two or more answers are weak, rewrite before returning.
 
-- `При этом важно помнить...`
-- `С другой стороны...`
-- `В конечном счете...`
-- `Как следствие...`
-- `Тем не менее важно отметить...`
-- `Это не просто X, а Y`
-- `Речь идет не только о..., но и о...`
-- `не только X, но и Y` (especially when reinforcing a thought with two equal parts—makes observation sound manufactured)
-- `Именно здесь кроется ключевой момент`
-- `На самом деле все гораздо глубже`
-- `Это открывает новые возможности`
-- `Это подводит нас к важному выводу`
+## Focused References
 
-Transitions should emerge from the thought, not from a template.
+Load only the focused references needed for the current risk:
 
-## Banned "Smart-Sounding" Empty Phrases
+- `.agents/data/banned-ai-openings-transitions.md`
+- `.agents/data/banned-ai-empty-language.md`
+- `.agents/data/banned-ai-structure-rhythm.md`
+- `.agents/data/banned-ai-endings-self-check.md`
 
-Do not use phrases that sound persuasive but add almost no meaning:
+## Positive Counterweight
 
-- `на стыке технологий и бизнеса`
-- `новая реальность`
-- `качественно новый уровень`
-- `меняет правила игры`
-- `фундаментальный сдвиг`
-- `переосмысление подхода`
-- `точка роста`
-- `точка входа`
-- `драйвер изменений`
-- `новый ландшафт`
-- `пространство возможностей`
-- `вектор развития`
-- `экосистема решений`
-- `масштабируемый подход`
-- `инструмент нового поколения`
+Do not only remove banned phrases. Replace them with the positive patterns in `.agents/data/valid-writing-patterns.md`:
 
-If an expression can be removed without loss of meaning, remove it.
-
-## Banned Metaphors Common In AI Text
-
-Do not use worn AI metaphors and pseudo-poetic constructions:
-
-- `ИИ — это не волшебная кнопка`
-- `ИИ — не серебряная пуля`
-- `ИИ — это усилитель`
-- `ИИ — новый электрический ток / новое электричество`
-- `это верхушка айсберга`
-- `это лишь начало большого пути`
-- `технологии становятся мостом между...`
-- `данные — новая нефть`
-- `бизнесу нужно плыть по волне изменений`
-- `балансировать между скоростью и качеством`
-- `держать руку на пульсе`
-- `открывать двери в будущее`
-- `двигаться в ногу со временем`
-- `строить мост между бизнесом и технологиями`
-- `компас в мире неопределенности`
-- `фундамент успеха`
-- `краеугольный камень`
-- `катализатор роста`
-
-Especially avoid metaphors that sound pretty but are not tied to a concrete observation.
-
-## Banned "Teacher Voice"
-
-Do not write with the tone of a lecturer, methodist, or neutral explanatory bot:
-
-- `Нужно понимать...`
-- `Важно осознать...`
-- `Необходимо учитывать...`
-- `Следует помнить...`
-- `Правильный подход заключается в том...`
-- `Каждому специалисту важно...`
-- `Успех зависит от того...`
-
-The text should sound like observation, inference, experience, or position, not a universal memo.
-
-## Banned Symmetrical Rhetoric
-
-Do not build paragraphs around too many neat binary formulas:
-
-- `Это не X. Это Y.`
-- `Ты не просто X, а Y.`
-- `Дело не в X, а в Y.`
-- `Вопрос не в том, чтобы..., а в том, чтобы...`
-- `Не потому что..., а потому что...`
-- `Суть не в..., суть в...`
-- `X — не Y, а Z` (causal reshuffling: "не от сложности, а от слоя управления")
-- `X — не только Y, но и Z` (expansion rhetoric that sounds editorial)
-- `главный/ключевой X... не только Y, но и Z` (reinforcement with two-part emphasis)
-
-These patterns are occasionally acceptable, but repeated use makes the text sound machine-produced.
-
-The "не только...но и" construction is especially risky when used to reinforce or expand a thought with two balanced parts—it creates false symmetry that makes the idea sound more manufactured than observed. Similarly, the "не...а" structure reshuffles causes or attributes in ways that sound editorial rather than observed.
-
-## Banned Endings
-
-Do not end posts like this:
-
-- `Будущее уже наступило`
-- `Остается только один вопрос...`
-- `Время покажет`
-- `Какой вывод можно сделать?`
-- `Именно поэтому...`
-- `Подводя итог...`
-- `В конечном счете все сводится к одному`
-- `Мир уже изменился`
-- `Те, кто поймут это раньше других...`
-- `Остальным остается догонять`
-
-An ending should land on a concrete thought, observation, turn, or practical takeaway, not a loud closing line.
-
-## Signs Of Weak LLM Text
-
-If a draft contains three or four of these signs, rewrite it:
-
-- too smooth and impersonal rhythm
-- paragraphs with overly similar length
-- too many neat three-part lists
-- almost no concrete detail
-- no live authorial position
-- many abstractions and few observations
-- grammatically polished but forgettable prose
-- paragraphs that could be moved into another post without damage
-- too many connective words and too little thought
-- a sense that the text was carefully manufactured instead of precisely said
-
-## Banned Research-Heavy Structure
-
-Do not build every section using the same mechanical formula:
-
-> тезис → источник → интерпретация → обобщающая фраза
-
-This pattern creates the appearance of an analytical compilation, not a live essay. Avoid making each block sound like a mini-report. Structure should vary:
-
-- sometimes start with observation, sometimes with doubt
-- sometimes with personal inference, sometimes with contrast
-- sometimes with a concrete scene, sometimes with abstraction
-
-Do not require every section to:
-- state a thesis first
-- confirm it with a source
-- explain its meaning
-- close with a polished conclusion
-
-The text should sound like an author thinking on the page, not a model assembling an analytical report.
-
-## Banned English Term Saturation
-
-Do not pack the text with untranslated English terms, especially if they look imported from research or AI summaries.
-
-Avoid excessive use of borrowed terms:
-
-- output, summary, cleanup
-- verification debt, decision overload
-- AI brain fry, workslop, agentic coding
-- AI workflows, workslop, async patterns
-
-If a term is necessary, introduce it naturally and explain it in human language. Do not turn the text into a collection of trendy concepts.
-
-Bad: `В AI-workflows возникает verification debt из-за workslop и decision overload.`
-
-Better: `Команда начинает тонуть в черновиках, которые вроде бы выглядят готовыми, но требуют всё больше проверки.`
-
-Use Russian formulations when they sound more alive and precise than English imports.
-
-## Banned Repetitive Rhetorical Patterns — Strictly Forbidden
-
-Do not repeat the same connective structures and rhythmic moves. Especially forbidden:
-
-- "Проблема не в том… проблема в том…"
-- "Это важная мысль."
-- "Дальше хуже."
-- "На уровне организаций…" / "На соседнем уровне…"
-- "То есть…"
-- "Именно поэтому…"
-- "Если убрать маркетинг…"
-- "Суть простая…"
-- "Всё это показывает…"
-
-Do not make text too smooth, symmetrical, and predictable. Do not close every paragraph with a strong summarizing phrase. Do not use identical syntax in adjacent paragraphs.
-
-Requirement: each section must have its own rhythm. Sometimes short phrases, sometimes long reasoning, sometimes a personal remark, sometimes a dry observation. The text should sound like a person thinking on the page, not like a model assembling a persuasive response.
-
-## What To Prefer Instead
-
-- a concrete observation instead of a generic thesis
-- a live formulation instead of a perfectly smoothed one
-- a clear inference instead of a decorative metaphor
-- a real trade-off instead of a moral
-- an exact remark instead of a universal recommendation
-- authorial tone instead of neutral explanation
-- varied rhythm: short and long sentences mixed, different paragraph structures
-- personal doubt or caution instead of confident universal claims
-
-## Final Self-Check
-
-Before returning text, check:
-
-1. Is there at least one phrase that could appear in hundreds of AI-written articles?
-2. Are there metaphors used for decoration rather than meaning?
-3. Are there introductory constructions that can be deleted without loss?
-4. Are there paragraphs heavy on abstraction and light on specifics?
-5. Does the text sound like a person with experience, rather than a well-trained model?
-
-If the answer is yes to at least two items, rewrite the draft.
+- concrete observation
+- lived or operational detail
+- real trade-off
+- exact inference
+- varied rhythm
+- authorial stance

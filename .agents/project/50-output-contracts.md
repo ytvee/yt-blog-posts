@@ -112,6 +112,8 @@ Format:
 - Frontmatter: pass/fail
 - Structure: pass/fail
 - Tone alignment: pass/fail
+- Pattern compliance: pass/fail
+- Anti-AI blockers: pass/fail
 ```
 
 ## 5. Final QA Report
@@ -127,6 +129,7 @@ Format:
 ## Gate Results
 - Factual sanity: pass/fail
 - Language quality: pass/fail
+- Pattern compliance: pass/fail
 - Anti-AI phrasing: pass/fail
 - Structure and readability: pass/fail
 - SEO heading structure: pass/fail

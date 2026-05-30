@@ -17,12 +17,22 @@ Use this checklist before returning a final markdown post.
 
 ## Anti-AI Phrasing
 
+- Treat this gate as blocking for final publish-ready markdown.
 - Remove generic polished filler.
 - Remove inflated summaries that say little.
 - Remove robotic transitions.
 - Remove conclusion formulas that sound machine-generated.
-- Check against `.agents/data/valid-writing-patterns.md` for positive constraints when it is populated.
+- Check against `.agents/data/valid-writing-patterns.md` for positive constraints.
 - Check against `.agents/data/banned-ai-patterns.md`.
+- Load focused anti-AI references listed in `.agents/data/banned-ai-patterns.md` when a risk appears.
+
+## Pattern Compliance
+
+- Does the draft use concrete observation rather than generic thesis?
+- Does it include authorial position, operational detail, or lived judgment?
+- Does it show a real trade-off, constraint, or useful skepticism?
+- Is the rhythm varied enough to avoid machine-like smoothness?
+- Does the ending land on a concrete thought rather than a formula?
 
 ## Structure And Readability
 

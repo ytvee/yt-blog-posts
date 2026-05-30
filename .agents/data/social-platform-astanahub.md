@@ -164,7 +164,8 @@ Required style sources:
 - `.agents/project/40-style-profile.md`
 - `.agents/templates/writing-style-guide.md`
 - `.agents/data/banned-ai-patterns.md`
-- `.agents/data/valid-writing-patterns.md` when it is filled later
+- `.agents/data/valid-writing-patterns.md`
+- `.agents/skills/enforce-writing-style/SKILL.md`
 
 Practical requirement:
 
@@ -179,6 +180,7 @@ Mandatory anti-pattern rule:
 
 - if the draft sounds like it could be pasted into dozens of generic AI or business posts without changing much, rewrite it
 - if the draft relies on stock rhetorical symmetry, teacher voice, decorative connectors, or polished filler, rewrite it
+- if the draft fails the positive-pattern gate, rewrite it before returning
 
 ## Original Link Rule
 
