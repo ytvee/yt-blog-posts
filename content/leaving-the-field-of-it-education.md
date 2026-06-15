@@ -9,13 +9,19 @@ published: true
 ---
 ![education-hero](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390310/hero_fxxohe.webp)
 
+<div align="center">* * *</div>
+
 *Приветствую, дорогой читатель. Начну с момента, как я попал в эту сферу, расскажу, какие у меня сформировались цели, что эта сфера дала лично мне и почему я решил сменить направление. Так что можете заварить себе чай, если вы ещё не сделали этого. Рад провести время в беседе с вами!*
 
 *Скажу только, что сделал всё, что хотел, и наслаждаюсь сегодня плодами своих прошлых действий. Это очень приятное чувство!*
 
+<div align="center">* * *</div>
+
 <video controls preload="metadata" width="100%">
   <source src="https://res.cloudinary.com/duyqvi0ig/video/upload/v1781531702/cool_end_ayzkkk.mp4" type="video/mp4" />
 </video>
+
+<div align="center">* * *</div>
 
 ## c чего все началось
 Когда я учился на первом курсе колледжа в Алмате, супруг моей знакомой подарил ей детский образовательный центр на один из её дней рождения. Знакомую зовут Наталья. Это было в начале 2-го курса. Я учился на факультете ВТиПО. В конце того же учебного года у Натальи одним днём уволился учитель по робототехнике. Вечером того же дня она дождалась меня возле дома, пока я не вернулся с учёбы, и, объяснив ситуацию, предложила обучать детей робототехнике.
@@ -44,7 +50,11 @@ published: true
 
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531555/kids-goa_wdqwet_qutjs0.webp)
 
+<div align="center">* * *</div>
+
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531556/lessonss_iyvdpj_h4f6ys.webp)
+
+<div align="center">* * *</div>
 
 За эти годы я успел...
 
@@ -56,19 +66,31 @@ published: true
 
 И всё это время это была не столько работа, сколько... В разные периоды по-разному: иногда это был мой хлеб, иногда — просто подработка. Но по сути это было служение.
 
+<div align="center">* * *</div>
+
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531552/lessons_i9ypte_aiib42.webp)
+
+<div align="center">* * *</div>
 
 Самое ценное, что дала эта дорога, — ...
 
 ## трансформация внутри меня самого
 
+<div align="center">* * *</div>
+
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531552/camp-all_zuwwdi_f3tlwf.webp)
 
+<div align="center">* * *</div>
+
 Я до сих пор помню учителей из своего детства. Их можно пересчитать по пальцам одной руки. Но эти люди — те, чьё присутствие в моём образовании я вспоминаю с огромной благодарностью. Именно они задали мне ориентир.
+
+<div align="center">* * *</div>
 
 <video controls preload="metadata" width="100%">
   <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389761/jasakids_ixnrjd.mp4" type="video/mp4" />
 </video>
+
+<div align="center">* * *</div>
 
 Когда я сам начал преподавать, решил: хочу быть таким же. Не «ещё одним преподом-теоретиком», не высокомерным наставником, а человеком, который останется в памяти, когда ребята повзрослеют. Которого будут вспоминать с теплом.
 
@@ -76,9 +98,13 @@ published: true
 
 И знаете, это было увлекательно.
 
+<div align="center">* * *</div>
+
 <video controls preload="metadata" width="100%">
   <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389763/online_zz4117.mp4" type="video/mp4" />
 </video>
+
+<div align="center">* * *</div>
 
 На занятиях мы проживали целый спектр эмоций: радость, азарт, злость, смех, иногда даже слёзы. В лагерях — ещё больше. Всё это — кладезь моментов, которые остаются внутри и делают жизнь объёмнее.
 
@@ -90,9 +116,13 @@ published: true
 
 И вот в 2023 году я чувствую: силы отпустить наконец появились.
 
+<div align="center">* * *</div>
+
 <video controls preload="metadata" width="100%">
   <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389760/five_hs5bp5.mp4" type="video/mp4" />
 </video>
+
+<div align="center">* * *</div>
 
 Пару лет я пытался полностью переключиться в другую деятельность, но только в 2025 это стало ощущаться естественно.
 
