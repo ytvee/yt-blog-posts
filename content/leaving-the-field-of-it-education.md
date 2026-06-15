@@ -40,6 +40,8 @@ published: true
 
 У меня были ученики, с которыми мы до сих пор на связи. Кто-то ещё только думает стать разработчиком, кто-то уже подрабатывает, а одного даже со своих проектов (он у меня подрабатывал) «отпустил» в более дорогой проект как-то. Больно было отпускать, но гордо.
 
+<div align="center">* * *<div>
+
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531555/kids-goa_wdqwet_qutjs0.webp)
 
 ![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531556/lessonss_iyvdpj_h4f6ys.webp)
@@ -53,6 +55,8 @@ published: true
 С умными и ленивыми, с «горящими познанием» и теми, кого приходилось уговаривать. С ребятами с особенностями — и их было немало.
 
 И всё это время это была не столько работа, сколько... В разные периоды по-разному: иногда это был мой хлеб, иногда — просто подработка. Но по сути это было служение.
+
+![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531552/lessons_i9ypte_aiib42.webp)
 
 Самое ценное, что дала эта дорога, — ...
 
