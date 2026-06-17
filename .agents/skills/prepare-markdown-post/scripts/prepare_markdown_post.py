@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 
@@ -201,13 +202,13 @@ def add_term_anchors(body: str, terms: list[tuple[str, str]]) -> str:
     return "\n".join(result).strip("\n") + "\n"
 
 
-def canonical_frontmatter(description: str, reading_time: int) -> str:
+def canonical_frontmatter(description: str, reading_time: int, post_date: str) -> str:
     tags = ", ".join(['""'] * 20)
     safe_description = escape_yaml_double_quoted(description)
     return (
         "---\n"
         'title: ""\n'
-        'date: ""\n'
+        f'date: "{post_date}"\n'
         f'description: "{safe_description}"\n'
         f"tags: [{tags}]\n"
         f"readingTime: {reading_time}\n"
@@ -264,10 +265,11 @@ def transform(markdown: str, description: str, term_anchors: list[tuple[str, str
     body = normalize_blank_lines(body)
     body = add_h2_anchors(body)
     body = add_term_anchors(body, term_anchors)
+    post_date = date.today().isoformat()
 
-    provisional = canonical_frontmatter(description, 1) + body
+    provisional = canonical_frontmatter(description, 1, post_date) + body
     reading_time = calculate_reading_time(provisional, repo_root)
-    transformed = canonical_frontmatter(description, reading_time) + body
+    transformed = canonical_frontmatter(description, reading_time, post_date) + body
 
     if visible_body_text(transformed) != original_visible:
         raise SystemExit("Visible body text changed; aborting.")

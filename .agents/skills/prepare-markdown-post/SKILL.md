@@ -1,6 +1,6 @@
 ---
 name: prepare-markdown-post
-description: "Prepare a markdown blog post without rewriting its visible text. Use when Codex must add or replace draft-safe frontmatter, remove excessive blank lines between markdown blocks, add invisible H2 and explicit term-definition anchors, write an SEO description in frontmatter, calculate readingTime with the repo script, and verify that the final article matches the original plan without changing body copy."
+description: "Prepare a markdown blog post without rewriting its visible text. Use when Codex must add or replace draft-safe frontmatter with the current YYYY-MM-DD date, remove excessive blank lines between markdown blocks, add invisible H2 and explicit term-definition anchors, write an SEO description in frontmatter, calculate readingTime with the repo script, and verify that the final article matches the original plan without changing body copy."
 ---
 
 # Prepare Markdown Post
@@ -21,6 +21,7 @@ The helper script still reads and writes the target markdown file directly when 
 - Normalize excessive blank lines outside fenced code blocks.
 - Add invisible HTML anchors before `##` headings.
 - Add invisible HTML anchors before explicit term definitions selected by the agent.
+- Write the current local date into frontmatter in `YYYY-MM-DD` format.
 - Write the generated SEO description into frontmatter.
 - Write calculated `readingTime` into frontmatter.
 
@@ -36,6 +37,7 @@ Do not change wording, spelling, punctuation, sentence order, paragraph order, h
    - H2 headings that need anchors
    - term definitions that need anchors, if any
    - SEO description approach
+   - current local date for frontmatter
    - verification steps
 4. Write a concise SEO description from the article's meaning. Do not modify the article body to fit the description.
 5. Run the helper script:
@@ -57,7 +59,7 @@ Use this draft-safe shape:
 ```yaml
 ---
 title: ""
-date: ""
+date: "<current YYYY-MM-DD>"
 description: "<seo description>"
 tags: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 readingTime: <calculated integer>
@@ -66,7 +68,7 @@ published: false
 ---
 ```
 
-Keep exactly 20 empty tag strings. Do not add frontmatter keys beyond the mirrored contract unless the user explicitly asks and the repo contract allows them.
+Use the local date at script runtime. Keep exactly 20 empty tag strings. Do not add frontmatter keys beyond the mirrored contract unless the user explicitly asks and the repo contract allows them.
 
 ## Anchor Rules
 
