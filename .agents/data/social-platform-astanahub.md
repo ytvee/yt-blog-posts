@@ -165,7 +165,6 @@ Required style sources:
 - `.agents/templates/writing-style-guide.md`
 - `.agents/data/banned-ai-patterns.md`
 - `.agents/data/valid-writing-patterns.md`
-- `.agents/skills/enforce-writing-style/SKILL.md`
 
 Practical requirement:
 

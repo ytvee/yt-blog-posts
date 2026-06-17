@@ -26,11 +26,13 @@ Then load only the task-specific references below.
 
 ## Task Routing
 
-- Topic discovery: `.agents/skills/discover-topics/SKILL.md`, `.agents/project/22-idea-generation-with-sources.md`, `.agents/project/30-source-research-policy.md`, `.agents/data/source-sites.md`, `.agents/data/blog-categories.md`.
-- Source ingestion: `.agents/skills/ingest-source-article/SKILL.md`, `.agents/project/30-source-research-policy.md`, `.agents/templates/source-article-analysis-template.md`.
-- Drafting or style adaptation: `.agents/skills/adapt-to-style/SKILL.md`, `.agents/skills/enforce-writing-style/SKILL.md`, `.agents/project/40-style-profile.md`, `.agents/templates/writing-style-guide.md`, `.agents/templates/post-draft-template.md`.
-- Revision: `.agents/skills/revise-draft/SKILL.md`, `.agents/skills/enforce-writing-style/SKILL.md`, `.agents/templates/revision-report-template.md`.
-- Final QA: `.agents/skills/final-post-qa/SKILL.md`, `.agents/skills/enforce-writing-style/SKILL.md`, `.agents/templates/qa-report-template.md`.
+- First analyze the prompt, classify the task, and select matching repo-local skills from `.agents/skills/**/SKILL.md` without waiting for the user to name them.
+- Current skill: `.agents/skills/create-text-skills/SKILL.md` for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
+- Topic discovery: `.agents/project/22-idea-generation-with-sources.md`, `.agents/project/30-source-research-policy.md`, `.agents/data/source-sites.md`, `.agents/data/blog-categories.md`.
+- Source ingestion: `.agents/project/30-source-research-policy.md`, `.agents/templates/source-article-analysis-template.md`.
+- Drafting or style adaptation: `.agents/project/40-style-profile.md`, `.agents/templates/writing-style-guide.md`, `.agents/templates/post-draft-template.md`.
+- Revision: `.agents/templates/revision-report-template.md`.
+- Final QA: `.agents/project/60-final-qa-gates.md`, `.agents/templates/qa-report-template.md`.
 - Blog app sync or redeploy docs: `.agents/project/70-sync-with-blog-app.md`, `.agents/project/80-redeploy-workflow.md`.
 
 ## Style Guardrail Loading

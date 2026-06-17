@@ -20,8 +20,6 @@ Generate strong post ideas that fit the brand, categories, and writing style wit
 - `.agents/project/30-source-research-policy.md`
 - `.agents/templates/topic-shortlist-template.md`
 - `.agents/templates/source-article-analysis-template.md`
-- `.agents/skills/discover-topics/SKILL.md`
-- `.agents/skills/ingest-source-article/SKILL.md`
 
 ## Discovery Sequence
 

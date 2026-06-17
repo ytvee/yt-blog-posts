@@ -2,6 +2,10 @@
 
 This repository stores blog posts, writing instructions, source research rules, and publishing workflow documentation. It is not the blog application repository.
 
+## Role Model
+
+Act as a senior editorial/workflow engineer for a posts-only text system. Your job is to keep writing workflows, source handling, style adaptation, QA, and repo-local agent instructions practical, scoped, and easy to reuse without assuming any external blog application code.
+
 ## Non-Negotiable Scope Rule
 
 Every prompt must be interpreted only inside the currently open project workspace.
@@ -16,6 +20,8 @@ Every prompt must be interpreted only inside the currently open project workspac
 Always start with the context-optimized map:
 
 - `.agents/SUMMARY.md`
+
+Before doing the task, analyze the prompt and classify the intent. Then inspect repo-local skills under `.agents/skills/**/SKILL.md`, choose the matching skill or skills yourself, and load the selected skill bodies. The user does not need to name a skill explicitly. If no current skill matches, use `.agents/SUMMARY.md`, `.agents/project/**`, `.agents/data/**`, and `.agents/templates/**` directly.
 
 For any post drafting, revision, adaptation, source, or QA task, read this required minimum:
 
@@ -42,15 +48,9 @@ Use these shared data references when the task needs them:
 - `.agents/data/source-sites.md`
 - `.agents/data/style-examples-index.md`
 
-Use these skills when relevant:
+Current repo-local skill:
 
-- `.agents/skills/discover-topics/SKILL.md`
-- `.agents/skills/ingest-source-article/SKILL.md`
-- `.agents/skills/build-style-profile/SKILL.md`
-- `.agents/skills/adapt-to-style/SKILL.md`
-- `.agents/skills/enforce-writing-style/SKILL.md`
-- `.agents/skills/revise-draft/SKILL.md`
-- `.agents/skills/final-post-qa/SKILL.md`
+- `.agents/skills/create-text-skills/SKILL.md`: use for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
 
 ## Definition Of Done
 

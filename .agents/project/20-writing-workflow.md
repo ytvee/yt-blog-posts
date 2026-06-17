@@ -61,7 +61,7 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 
 - Input: style-adapted material and post contract
 - Action: assemble a markdown post draft using the templates and mirrored contract
-- Action: run the style gate from `.agents/skills/enforce-writing-style/SKILL.md`
+- Action: run the style gate directly from `.agents/data/valid-writing-patterns.md` and `.agents/data/banned-ai-patterns.md`; load focused anti-AI references only when needed
 - Output: draft in the format from `.agents/templates/post-draft-template.md`
 - Stop condition: a reviewable draft exists with valid structure
 - What must not be done: do not mark the post final before review; do not leave publish-facing placeholders
