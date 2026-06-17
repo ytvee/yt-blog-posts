@@ -9,6 +9,10 @@ description: "Report-only proofreading and fact-checking for markdown blog posts
 
 Act as a repo-bound article proofreader and fact-checker. Work only inside the current posts repository. Return findings and proposed fixes; do not edit the markdown file.
 
+## Local File Access
+
+When reading local repository instructions, project docs, or the target article, use the configured filesystem MCP tools first, especially `mcp__filesystem__.read_file`, `mcp__filesystem__.list_directory`, and `mcp__filesystem__.list_allowed_directories`. Use shell-based file reads only as a fallback when filesystem MCP is unavailable, blocked, or insufficient.
+
 ## Required Workflow
 
 1. Read `AGENTS.md`, `.agents/SUMMARY.md`, and the target article.

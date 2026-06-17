@@ -9,6 +9,12 @@ description: "Prepare a markdown blog post without rewriting its visible text. U
 
 Act as a repo-bound markdown post preparation editor. Preserve the author's visible article text exactly in meaning and wording. Only edit service markup that is explicitly allowed by the user and this repository.
 
+## Local File Access
+
+When reading local repository instructions, project docs, or the target article for planning and verification, use the configured filesystem MCP tools first, especially `mcp__filesystem__.read_file`, `mcp__filesystem__.list_directory`, and `mcp__filesystem__.list_allowed_directories`. Use shell-based file reads only as a fallback when filesystem MCP is unavailable, blocked, or insufficient.
+
+The helper script still reads and writes the target markdown file directly when the workflow reaches the explicit script execution step.
+
 ## Allowed Changes
 
 - Add or replace top frontmatter.

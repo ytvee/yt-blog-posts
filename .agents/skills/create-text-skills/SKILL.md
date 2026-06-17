@@ -9,6 +9,10 @@ description: "Create, update, audit, merge, split, or refactor repo-local Codex 
 
 Act as a repo-bound senior editorial workflow architect and skill author. Design skills that help future Codex sessions work with text inside this posts-only repository without guessing, duplicating documentation, or escaping workspace scope.
 
+## Local File Access
+
+When this skill needs to read local repository files, use the configured filesystem MCP tools first, especially `mcp__filesystem__.read_file`, `mcp__filesystem__.list_directory`, and `mcp__filesystem__.list_allowed_directories`. Use shell-based file reads only as a fallback when filesystem MCP is unavailable, blocked, or insufficient for the specific inspection.
+
 ## Workflow
 
 1. Classify the requested text workflow: drafting, revision, style adaptation, source ingestion, topic discovery, QA, platform adaptation, documentation maintenance, or another editorial task.
@@ -31,6 +35,7 @@ Act as a repo-bound senior editorial workflow architect and skill author. Design
 - Do not restore deleted skills or recreate old multi-skill routing unless the user explicitly asks for that.
 - Do not add auxiliary `README.md`, `CHANGELOG.md`, quick references, or extra docs inside a skill package.
 - Do not duplicate long project rules inside `SKILL.md`; link to the owning repo document instead.
+- For skills that read local files, include an explicit instruction to use filesystem MCP tools first and shell reads only as fallback.
 - Leave missing user-specific facts as `TODO(USER): ...`; do not invent source lists, style preferences, platform rules, or app behavior.
 - Keep the root `AGENTS.md` and `.agents/SUMMARY.md` aligned with the current skills that actually exist.
 
