@@ -52,16 +52,17 @@ Current repo-local skills:
 
 - `.agents/skills/create-text-skills/SKILL.md`: use for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
 - `.agents/skills/prepare-markdown-post/SKILL.md`: use for preparing markdown posts without rewriting visible text, including frontmatter, blank-line cleanup, anchors, SEO description, and reading time.
-- `.agents/skills/post-checker/SKILL.md`: use for report-only grammar, syntax, ё/Ё, and web-sourced factual checks of markdown posts without editing the file.
+- `.agents/skills/post-checker/SKILL.md`: use for safe language auto-fixes and web-sourced factual checks of markdown posts; grammar, syntax, typos, punctuation, casing, spacing, and ё/Ё are auto-fixed for local markdown files, while factual and meaning changes remain report-only.
 - `.agents/skills/telegram-post-adapter/SKILL.md`: use for adapting a topic and source article into a Russian Telegram post for SEO distribution in the author's voice.
 
 Article checking and processing flow:
 
-- For prompts like `проверь статью`, `проверь текст`, `проверь факты`, or `вычитай статью`, use `post-checker`; do not edit the article, return a report or `Все ок.`.
-- For prompts like `обработай статью`, `подготовь статью`, or `прогони статью`, first analyze the article and state a plan, then use `prepare-markdown-post`, then use `post-checker`, then verify each stage against the plan.
+- For prompts like `проверь статью`, `проверь текст`, or `вычитай статью`, use `post-checker`; automatically apply safe language fixes to local markdown files and return a compact report or `Все ок.`.
+- For prompts like `проверь факты`, use `post-checker`; factual findings are report-only unless the user separately approves specific factual edits.
+- For prompts like `обработай статью`, `подготовь статью`, or `прогони статью`, first analyze the article and state a plan, then use `prepare-markdown-post`, then use `post-checker` for safe language auto-fixes and factual report-only checks, then verify each stage against the plan.
 - For prompts like `сделай пост для телеграма`, `адаптируй статью в телеграм`, or `сделай SEO-дистрибуцию`, use `telegram-post-adapter`; return the adapted post in the response by default and do not create files unless explicitly asked.
 - If the article path is not explicit, use the active IDE file when it is under `content/*.md`; otherwise ask for the target article path.
-- Do not apply grammar or factual fixes from `post-checker` unless the user separately approves specific edits.
+- Do not apply factual, stylistic, SEO, structural, or meaning changes from `post-checker` unless the user separately approves specific edits.
 
 ## Definition Of Done
 

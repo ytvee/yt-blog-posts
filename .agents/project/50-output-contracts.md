@@ -162,14 +162,10 @@ If there are findings, use:
 ```md
 # Post Checker Report
 
-## Грамматика и синтаксис
+## Примененные безопасные правки
 - Цитата: "..."
   Проблема: ...
-  Предложенная правка: "..."
-
-## Буква ё
-- Цитата: "..."
-  Предложенная правка: "..."
+  Правка: "..."
 
 ## Достоверность
 - Утверждение: "..."
@@ -187,7 +183,8 @@ Rules:
 - omit empty sections
 - keep article and source quotes short
 - include source links for factual findings
-- do not edit the article as part of this report
+- safe language fixes may already be applied to local markdown files
+- do not apply factual, stylistic, SEO, structural, or meaning changes as part of this report
 
 ## 8. Telegram Adaptation
 

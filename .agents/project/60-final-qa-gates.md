@@ -15,7 +15,7 @@ Use this checklist before returning a final markdown post.
 - Are sentences clear without awkward translation residue?
 - Are paragraphs balanced and readable?
 - Is repetition controlled?
-- For grammar, syntax, typo, and ё/Ё checks, use `.agents/skills/post-checker/SKILL.md`.
+- For grammar, syntax, typo, punctuation, casing, spacing, and ё/Ё checks, use `.agents/skills/post-checker/SKILL.md`; safe language issues may be auto-fixed in local markdown files.
 
 ## Anti-AI Phrasing
 

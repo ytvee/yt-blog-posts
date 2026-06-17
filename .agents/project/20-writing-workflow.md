@@ -19,8 +19,9 @@ Examples: `проверь статью`, `проверь текст`, `пров�
 1. Identify the target article. If no path is given, use the active IDE file when it is under `content/*.md`; otherwise ask for the path.
 2. Load `.agents/skills/post-checker/SKILL.md`.
 3. Analyze the article and state the check plan.
-4. Return a `Post Checker Report` or exactly `Все ок.`.
-5. Do not edit the article unless the user separately approves specific fixes.
+4. Apply safe language fixes automatically for grammar, syntax, typos, punctuation, casing, spacing, and `ё`/`Ё`.
+5. Return a `Post Checker Report` or exactly `Все ок.`.
+6. Do not apply factual, stylistic, SEO, structural, or meaning changes unless the user separately approves specific fixes.
 
 ### Processing prompts
 
@@ -28,9 +29,9 @@ Examples: `обработай статью`, `подготовь статью`, 
 
 1. Identify the target article and create a concrete plan.
 2. Load and run `.agents/skills/prepare-markdown-post/SKILL.md` for allowed service markup only.
-3. Load and run `.agents/skills/post-checker/SKILL.md` for report-only grammar, ё/Ё, syntax, and web-sourced factual checks.
+3. Load and run `.agents/skills/post-checker/SKILL.md` for safe language auto-fixes and web-sourced factual report-only checks.
 4. Verify each stage against the plan.
-5. Do not apply `post-checker` grammar or factual fixes without separate user approval.
+5. Do not apply `post-checker` factual, stylistic, SEO, structural, or meaning changes without separate user approval.
 
 ## Step 1. Fill Source Site List
 

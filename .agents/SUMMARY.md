@@ -29,8 +29,8 @@ Then load only the task-specific references below.
 - First analyze the prompt, classify the task, and select matching repo-local skills from `.agents/skills/**/SKILL.md` without waiting for the user to name them.
 - Skill authoring: `.agents/skills/create-text-skills/SKILL.md` for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
 - Markdown post preparation: `.agents/skills/prepare-markdown-post/SKILL.md` for adding draft-safe frontmatter, removing excessive blank lines, adding anchors, writing SEO description, and calculating reading time without rewriting visible text.
-- Article checking: `.agents/skills/post-checker/SKILL.md` for `проверь статью`, `проверь текст`, `проверь факты`, `вычитай статью`; it returns findings or `Все ок.` and does not edit files.
-- Article processing: for `обработай статью`, `подготовь статью`, `прогони статью`, run plan -> `prepare-markdown-post` -> `post-checker` -> stage verification.
+- Article checking: `.agents/skills/post-checker/SKILL.md` for `проверь статью`, `проверь текст`, `проверь факты`, `вычитай статью`; it auto-fixes safe language issues in local markdown files, keeps factual changes report-only, and returns findings or `Все ок.`.
+- Article processing: for `обработай статью`, `подготовь статью`, `прогони статью`, run plan -> `prepare-markdown-post` -> `post-checker` safe language auto-fix and factual report-only checks -> stage verification.
 - Telegram adaptation: `.agents/skills/telegram-post-adapter/SKILL.md` for `сделай пост для телеграма`, `адаптируй статью в телеграм`, `сделай SEO-дистрибуцию`; use `.agents/data/social-platform-telegram.md`, style references, and anti-AI guardrails, then return the post in the response without creating files by default.
 - Topic discovery: `.agents/project/22-idea-generation-with-sources.md`, `.agents/project/30-source-research-policy.md`, `.agents/data/source-sites.md`, `.agents/data/blog-categories.md`.
 - Source ingestion: `.agents/project/30-source-research-policy.md`, `.agents/templates/source-article-analysis-template.md`.
