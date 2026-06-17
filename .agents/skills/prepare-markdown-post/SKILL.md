@@ -75,6 +75,10 @@ Use the local date at script runtime. Keep exactly 20 empty tag strings. Do not 
 - Add H2 anchors as `<a id="heading-slug"></a>` on the line immediately before the `##` heading.
 - Do not add anchors for `#`, `###`, or deeper headings unless the user explicitly changes scope.
 - Do not alter heading text to create an anchor.
+- Do not use Pandoc-style or MDX-hostile heading attributes such as `## Heading {#custom-id}`.
+- If a stable custom anchor is needed, add or preserve a separate `<a id="custom-id"></a>` line before the heading.
+- Treat `{#custom-id}` in a markdown heading as a service-markup defect, not as visible author text: move the id into a separate anchor and leave the visible heading text clean.
+- Normalize malformed anchors like `<a id="custom-id"> </a>` to `<a id="custom-id"></a>`.
 - Generate slugs by lowercasing text, trimming it, replacing punctuation and whitespace with `-`, preserving Unicode letters and digits, and adding `-2`, `-3`, etc. for duplicates.
 - For terms, add one anchor only at the definition, not at every mention.
 - Do not guess term definitions. If no clear definition exists, do not add a term anchor.

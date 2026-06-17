@@ -13,9 +13,10 @@ from pathlib import Path
 
 
 FRONTMATTER_RE = re.compile(r"\A---\s*\n.*?\n---\s*(?:\n|\Z)", re.DOTALL)
-ANCHOR_RE = re.compile(r'^\s*<a\s+id="([^"]+)"></a>\s*$', re.IGNORECASE)
-ANCHOR_ANY_RE = re.compile(r'\s*<a\s+id="[^"]+"></a>\s*', re.IGNORECASE)
+ANCHOR_RE = re.compile(r'^\s*<a\s+id="([^"]+)">\s*</a>\s*$', re.IGNORECASE)
+ANCHOR_ANY_RE = re.compile(r'\s*<a\s+id="[^"]+">\s*</a>\s*', re.IGNORECASE)
 H2_RE = re.compile(r"^(##)(?!#)\s+(.+?)\s*$")
+HEADING_ATTR_RE = re.compile(r"\s+\{#([^{}\s]+)\}\s*$")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 WHITESPACE_RE = re.compile(r"\s+")
 
@@ -107,6 +108,64 @@ def previous_nonblank_is_anchor(lines: list[str]) -> bool:
             continue
         return bool(ANCHOR_RE.match(line))
     return False
+
+
+def replace_previous_nonblank_anchor(lines: list[str], anchor_id: str) -> bool:
+    for index in range(len(lines) - 1, -1, -1):
+        if lines[index].strip() == "":
+            continue
+        if ANCHOR_RE.match(lines[index]):
+            lines[index] = f'<a id="{anchor_id}"></a>'
+            return True
+        return False
+    return False
+
+
+def normalize_anchor_markup(body: str) -> str:
+    result: list[str] = []
+    in_fence = False
+
+    for line in body.splitlines():
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            result.append(line)
+            continue
+
+        match = ANCHOR_RE.match(line) if not in_fence else None
+        if match:
+            result.append(f'<a id="{match.group(1)}"></a>')
+            continue
+
+        result.append(line)
+
+    return "\n".join(result).strip("\n") + "\n"
+
+
+def normalize_h2_heading_attributes(body: str) -> str:
+    result: list[str] = []
+    in_fence = False
+
+    for line in body.splitlines():
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            result.append(line)
+            continue
+
+        match = H2_RE.match(line) if not in_fence else None
+        if match:
+            heading_text = match.group(2)
+            attr_match = HEADING_ATTR_RE.search(heading_text)
+            if attr_match:
+                anchor_id = attr_match.group(1)
+                clean_heading = HEADING_ATTR_RE.sub("", heading_text).rstrip()
+                if not replace_previous_nonblank_anchor(result, anchor_id):
+                    result.append(f'<a id="{anchor_id}"></a>')
+                result.append(f"{match.group(1)} {clean_heading}")
+                continue
+
+        result.append(line)
+
+    return "\n".join(result).strip("\n") + "\n"
 
 
 def add_h2_anchors(body: str) -> str:
@@ -221,6 +280,7 @@ def canonical_frontmatter(description: str, reading_time: int, post_date: str) -
 def visible_body_text(markdown: str) -> str:
     body = split_body(markdown)
     body = ANCHOR_ANY_RE.sub(" ", body)
+    body = HEADING_ATTR_RE.sub("", body)
     body = WHITESPACE_RE.sub(" ", body).strip()
     return body
 
@@ -263,6 +323,8 @@ def transform(markdown: str, description: str, term_anchors: list[tuple[str, str
     original_visible = visible_body_text(markdown)
     body = split_body(markdown)
     body = normalize_blank_lines(body)
+    body = normalize_anchor_markup(body)
+    body = normalize_h2_heading_attributes(body)
     body = add_h2_anchors(body)
     body = add_term_anchors(body, term_anchors)
     post_date = date.today().isoformat()

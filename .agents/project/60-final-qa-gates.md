@@ -40,6 +40,9 @@ Use this checklist before returning a final markdown post.
 
 - Does the body begin with `##`?
 - Is there no `#` heading inside the body?
+- Are markdown headings MDX-safe, with no inline `{#custom-id}` attributes?
+- Are custom anchors written as exact separate lines like `<a id="custom-id"></a>` rather than malformed tags with inner whitespace?
+- Do internal links to custom anchors have matching `<a id="..."></a>` targets?
 - Does the post have a clear opening, development, and ending?
 - Are sections and paragraphs easy to scan?
 - Is there no technical garbage left in the body?

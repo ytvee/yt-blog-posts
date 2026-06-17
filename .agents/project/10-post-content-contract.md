@@ -68,6 +68,9 @@ Validation rules:
 
 - Do not use markdown `#` inside the body.
 - The body must start with `##`.
+- Keep markdown headings MDX-safe: do not add inline heading attributes such as `{#custom-id}` to headings.
+- Custom anchors must be separate HTML lines in the exact shape `<a id="custom-id"></a>` immediately before the target `##` heading or term definition.
+- Heading text must remain plain markdown text without trailing `{...}` anchor syntax.
 - Do not leave placeholder text such as `Draft`, `TBD`, or fake descriptions.
 - Do not leave empty code fences, editor notes, JSON dumps, debug blocks, or technical garbage in the body.
 - Keep inline image alt text meaningful.
@@ -96,6 +99,8 @@ Treat these as blocking failures:
 - invalid dates
 - invalid `readingTime`
 - body starts with `#`
+- inline heading attributes such as `{#custom-id}` in markdown headings
+- malformed anchors such as `<a id="custom-id"> </a>` instead of `<a id="custom-id"></a>`
 - placeholder values in publish-facing fields
 - invalid or broken media references
 - file placed outside `content/`
