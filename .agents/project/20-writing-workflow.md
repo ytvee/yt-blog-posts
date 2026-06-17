@@ -8,6 +8,30 @@ This workflow is posts-only. It is designed for a content repository, not for ap
 - Do not switch to another local repository to resolve missing context.
 - If the current repo lacks required information, leave `TODO(USER): ...` or reference the missing mirrored document.
 
+## Direct Article Check And Processing Flow
+
+Use this flow when the user asks to check, proofread, fact-check, process, prepare, or run an existing `content/*.md` article.
+
+### Check-only prompts
+
+Examples: `проверь статью`, `проверь текст`, `проверь факты`, `вычитай статью`.
+
+1. Identify the target article. If no path is given, use the active IDE file when it is under `content/*.md`; otherwise ask for the path.
+2. Load `.agents/skills/post-checker/SKILL.md`.
+3. Analyze the article and state the check plan.
+4. Return a `Post Checker Report` or exactly `Все ок.`.
+5. Do not edit the article unless the user separately approves specific fixes.
+
+### Processing prompts
+
+Examples: `обработай статью`, `подготовь статью`, `прогони статью`.
+
+1. Identify the target article and create a concrete plan.
+2. Load and run `.agents/skills/prepare-markdown-post/SKILL.md` for allowed service markup only.
+3. Load and run `.agents/skills/post-checker/SKILL.md` for report-only grammar, ё/Ё, syntax, and web-sourced factual checks.
+4. Verify each stage against the plan.
+5. Do not apply `post-checker` grammar or factual fixes without separate user approval.
+
 ## Step 1. Fill Source Site List
 
 - Input: user-provided source sites and editorial boundaries

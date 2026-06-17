@@ -7,6 +7,7 @@ Use this checklist before returning a final markdown post.
 - Are all claims supported by the source material or explicitly framed as editorial interpretation?
 - Are names, dates, quotes, and examples accurate?
 - Are there any unsupported additions?
+- For factual verification requests, use `.agents/skills/post-checker/SKILL.md` and web-sourced evidence.
 
 ## Language Quality
 
@@ -14,6 +15,7 @@ Use this checklist before returning a final markdown post.
 - Are sentences clear without awkward translation residue?
 - Are paragraphs balanced and readable?
 - Is repetition controlled?
+- For grammar, syntax, typo, and ё/Ё checks, use `.agents/skills/post-checker/SKILL.md`.
 
 ## Anti-AI Phrasing
 

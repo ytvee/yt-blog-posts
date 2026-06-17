@@ -1,0 +1,4 @@
+interface:
+  display_name: "Telegram Post Adapter"
+  short_description: "Adapt articles into Telegram posts"
+  default_prompt: "Use $telegram-post-adapter to turn a topic and article into a Telegram post in the author voice."

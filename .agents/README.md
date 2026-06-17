@@ -7,7 +7,7 @@ This directory contains the local agent instruction bundle for the posts-only YT
 - `project/` contains repository-specific workflow, content contract, QA, source, sync, and redeploy rules.
 - `data/` contains editorial source maps, brand profile, style examples, valid writing patterns, and anti-AI guardrails.
 - `templates/` contains output formats for shortlists, source analysis, drafts, revisions, QA, and frontmatter.
-- `skills/` contains repo-local Codex skills. Current skills: `create-text-skills` for authoring text/editorial workflow skills and `prepare-markdown-post` for safe markdown post preparation.
+- `skills/` contains repo-local Codex skills. Current skills: `create-text-skills`, `prepare-markdown-post`, `post-checker`, and `telegram-post-adapter`.
 
 ## Fast Start
 

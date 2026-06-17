@@ -148,3 +148,61 @@ Format:
 - return only the final markdown post content
 - do not include analysis, notes, or QA commentary
 - do not include `TODO(USER): ...` in the final publish-ready file
+
+## 7. Post Checker Report
+
+If there are no findings, return exactly:
+
+```text
+Все ок.
+```
+
+If there are findings, use:
+
+```md
+# Post Checker Report
+
+## Грамматика и синтаксис
+- Цитата: "..."
+  Проблема: ...
+  Предложенная правка: "..."
+
+## Буква ё
+- Цитата: "..."
+  Предложенная правка: "..."
+
+## Достоверность
+- Утверждение: "..."
+  Статус: confirmed / questionable / unsupported / incorrect
+  Источник: ...
+  Основание: "..."
+  Предложенная правка: "..."
+
+## Не проверялось
+- ...
+```
+
+Rules:
+
+- omit empty sections
+- keep article and source quotes short
+- include source links for factual findings
+- do not edit the article as part of this report
+
+## 8. Telegram Adaptation
+
+Format:
+
+```md
+<telegram post>
+
+Оригинальная статья: TODO(LINK)
+```
+
+Rules:
+
+- return the post in the response by default
+- use 1200-2200 characters by default, excluding the link line
+- do not include QA notes, process notes, or headings around the post
+- preserve standalone value; do not make the post only a teaser
+- apply valid writing patterns and anti-AI guardrails before returning
