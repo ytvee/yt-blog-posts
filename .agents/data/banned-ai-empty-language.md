@@ -24,6 +24,27 @@ Avoid phrases that sound persuasive but add little meaning:
 
 If an expression can be removed without loss of meaning, remove it.
 
+## Universal Business Phrases Without Operational Edge
+
+Avoid broad business summaries that sound right but do not create a picture:
+
+- `разные классы систем, разные бюджеты, разные риски`
+- `разная польза для бизнеса`
+- `это влияет на процессы и эффективность`
+- `это требует комплексного подхода`
+- `важно учитывать цели бизнеса`
+
+Replace them with one sharp operational detail. For AI/business posts, useful edges include:
+
+- a button-based Telegram bot versus a backend service
+- CRM integration, API calls, permissions, logs, retries, monitoring, or audit
+- who confirms an action before money, status, or customer data changes
+- the person or team that owns the result when automation fails
+
+Bad: `Это разные классы систем, разные бюджеты и разные риски.`
+
+Better: `Где-то хватит Telegram-бота на кнопках, а где-то внезапно появляются CRM, права доступа, API, логи и человек, который отвечает за результат.`
+
 ## Worn AI Metaphors
 
 Do not use metaphors that sound decorative rather than observed:

@@ -47,6 +47,32 @@ Avoid requiring every section to:
 
 The text should sound like an author thinking on the page, not a model assembling an analytical report.
 
+## Banned Smooth Explanation Ladder
+
+Avoid a too-clean explanatory staircase:
+
+`term -> examples -> classification -> conclusion -> solution`
+
+This structure is convenient, but it often sounds like a generated mini-lesson. Break it when the topic needs authorial judgment:
+
+- add a small practical snag or "wait, this is where it gets messy" turn
+- name the budget, implementation, or ownership consequence
+- include one rough operational detail instead of another clean abstraction
+- let the author interrupt the explanation when the term is too vague
+
+For example, do not only explain that systems have different risks. Show the edge: a button-based Telegram bot is one project; backend access, CRM writes, API calls, logs, permissions, and a responsible human are another project.
+
+## Banned Encyclopedia Card Rhythm
+
+Avoid repeated paragraphs shaped like reference cards:
+
+- `X — это...`
+- `Он может...`
+- `А Y делает...`
+- `В отличие от X, Y...`
+
+One definition can be useful. A chain of matching definitions makes the prose sound like a glossary. Replace some cards with a work situation, a question from a client, a failure mode, a line from a brief, or a concrete implementation consequence.
+
 ## Repetitive Rhetorical Patterns
 
 Strictly avoid repeated connective structures and rhythmic moves:

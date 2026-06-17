@@ -191,15 +191,14 @@ Rules:
 Format:
 
 ```md
-<telegram post>
-
-Оригинальная статья: TODO(LINK)
+<telegram post with TODO(LINK) integrated natively in the text>
 ```
 
 Rules:
 
 - return the post in the response by default
-- use 1200-2200 characters by default, excluding the link line
+- use 1200-2200 characters by default, excluding the `TODO(LINK)` placeholder URL
 - do not include QA notes, process notes, or headings around the post
 - preserve standalone value; do not make the post only a teaser
+- include the source link as a natural sentence in the post, not as a detached `Оригинальная статья: TODO(LINK)` footer
 - apply valid writing patterns and anti-AI guardrails before returning

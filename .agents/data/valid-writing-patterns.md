@@ -17,6 +17,8 @@ Every substantial draft or revision should include several of these patterns:
 - Clear inference: connect facts to a practical conclusion without inflating the claim.
 - Varied rhythm: mix short and medium paragraphs; use short sentences for emphasis, not as a constant dramatic device.
 - Natural first person: use first-person voice when it reflects real experience, curiosity, doubt, or responsibility.
+- Jagged operational detail: replace one smooth generalization with a rough working edge, such as a call, estimate, CRM field, permission, log, deadline, handoff, or failure owner.
+- Authorial interruption: when a term is too vague, briefly stop the explanation and name the confusion instead of continuing the lesson smoothly.
 - Concrete ending: close with a sharpened observation, practical takeaway, or genuine question that follows from the post.
 
 ## Strong Structural Moves
@@ -38,6 +40,7 @@ Do not force a structure if the current post has a better natural shape.
 - Avoid closing every paragraph with a polished summary line.
 - Prefer exact plain wording over decorative phrasing.
 - Use questions as genuine invitations or thinking prompts, not engagement bait.
+- Use local authorial moves when they fit: `когда начинаешь уточнять детали, начинается каша`, `и вот тут хочется притормозить`, `это как пытаться починить программу, не читая логи`.
 
 ## Positive Gate
 
@@ -46,6 +49,7 @@ Before returning prose, confirm:
 - the opening could not be pasted into a generic business or AI article unchanged
 - the text contains concrete evidence of lived or operational judgment
 - the argument has at least one useful trade-off or constraint
+- at least one abstraction is grounded in a rough operational detail
 - the rhythm is not uniformly smooth
 - the ending lands on a real thought rather than a formula
 
