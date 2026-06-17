@@ -1,85 +1,83 @@
 ---
 name: prepare-markdown-post
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: "Prepare a markdown blog post without rewriting its visible text. Use when Codex must add or replace draft-safe frontmatter, remove excessive blank lines between markdown blocks, add invisible H2 and explicit term-definition anchors, write an SEO description in frontmatter, calculate readingTime with the repo script, and verify that the final article matches the original plan without changing body copy."
 ---
 
 # Prepare Markdown Post
 
-## Overview
+## Role
 
-[TODO: 1-2 sentences explaining what this skill enables]
+Act as a repo-bound markdown post preparation editor. Preserve the author's visible article text exactly in meaning and wording. Only edit service markup that is explicitly allowed by the user and this repository.
 
-## Structuring This Skill
+## Allowed Changes
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+- Add or replace top frontmatter.
+- Normalize excessive blank lines outside fenced code blocks.
+- Add invisible HTML anchors before `##` headings.
+- Add invisible HTML anchors before explicit term definitions selected by the agent.
+- Write the generated SEO description into frontmatter.
+- Write calculated `readingTime` into frontmatter.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+Do not change wording, spelling, punctuation, sentence order, paragraph order, heading text, body copy, image alt text, links, quotes, or examples.
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+## Required Workflow
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+1. Read `AGENTS.md`, `.agents/SUMMARY.md`, and `.agents/project/10-post-content-contract.md`.
+2. Read the target article completely.
+3. State the role for this task and create a concrete action plan before editing. Include:
+   - target file
+   - exact allowed changes
+   - H2 headings that need anchors
+   - term definitions that need anchors, if any
+   - SEO description approach
+   - verification steps
+4. Write a concise SEO description from the article's meaning. Do not modify the article body to fit the description.
+5. Run the helper script:
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+```bash
+python .agents/skills/prepare-markdown-post/scripts/prepare_markdown_post.py content/<slug>.md --description "<seo description>"
+```
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+Add `--term-anchor "Term::custom-slug"` only for terms whose definition location is clear in the article.
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+6. If the script reports that visible text changed, stop and fix the tooling or revert only your failed attempt.
+7. Run `python scripts/calc_reading_time.py content/<slug>.md --details` after the final edit and confirm the frontmatter value matches.
+8. Compare the result against the initial plan and report any skipped item with a concrete reason.
 
-## [TODO: Replace with the first main section based on chosen structure]
+## Frontmatter Contract
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+Use this draft-safe shape:
 
-## Resources (optional)
-
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
-
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
-
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
-
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
-
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
+```yaml
 ---
+title: ""
+date: ""
+description: "<seo description>"
+tags: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+readingTime: <calculated integer>
+ogImage: ""
+published: false
+---
+```
 
-**Not every skill requires all three types of resources.**
+Keep exactly 20 empty tag strings. Do not add frontmatter keys beyond the mirrored contract unless the user explicitly asks and the repo contract allows them.
+
+## Anchor Rules
+
+- Add H2 anchors as `<a id="heading-slug"></a>` on the line immediately before the `##` heading.
+- Do not add anchors for `#`, `###`, or deeper headings unless the user explicitly changes scope.
+- Do not alter heading text to create an anchor.
+- Generate slugs by lowercasing text, trimming it, replacing punctuation and whitespace with `-`, preserving Unicode letters and digits, and adding `-2`, `-3`, etc. for duplicates.
+- For terms, add one anchor only at the definition, not at every mention.
+- Do not guess term definitions. If no clear definition exists, do not add a term anchor.
+
+## Helper Script
+
+Use `scripts/prepare_markdown_post.py` for deterministic markup edits. Supported options:
+
+- `--description "<text>"`: required SEO description for frontmatter.
+- `--term-anchor "Term::custom-slug"`: optional explicit term anchor; repeat as needed.
+- `--dry-run`: print the transformed markdown without writing.
+- `--check`: report whether the file would change without writing.
+
+The script must preserve visible body text while ignoring frontmatter, whitespace collapse, and added HTML anchors in its comparison.

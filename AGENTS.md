@@ -51,6 +51,7 @@ Use these shared data references when the task needs them:
 Current repo-local skill:
 
 - `.agents/skills/create-text-skills/SKILL.md`: use for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
+- `.agents/skills/prepare-markdown-post/SKILL.md`: use for preparing markdown posts without rewriting visible text, including frontmatter, blank-line cleanup, anchors, SEO description, and reading time.
 
 ## Definition Of Done
 
