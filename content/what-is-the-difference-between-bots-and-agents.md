@@ -5,7 +5,7 @@ description: "ИИ-агент — это система, где модель у�
 tags: ["ии-агент", "ai", "искусственный интеллект", "ai ассистент для бизнеса", "chatbot", "использование ии в бизнесе", "llm", "ai-agent", "бизнес и искусственный интеллект", "ии-агенты", "нейросети для бизнеса", "ллм", "ии чат-бот", "чат-бот", "ии-бот"]
 readingTime: 8
 ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1781734087/hero_krnvpf.webp"
-published: true
+published: false
 ---
 
 ## Введение
