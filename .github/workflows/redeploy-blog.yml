@@ -1,31 +1,36 @@
-name: Redeploy blog on Railway
+name: Notify blog deploy
 
 on:
   push:
     branches:
       - main
+    paths:
+      - content/**
+      - media/**
+      - .github/workflows/redeploy-blog.yml
   workflow_dispatch:
 
 concurrency:
-  group: redeploy-blog-production
+  group: notify-blog-production-deploy
   cancel-in-progress: true
 
 jobs:
-  redeploy:
+  notify:
     runs-on: ubuntu-latest
-    container: ghcr.io/railwayapp/cli:latest
-    env:
-      RAILWAY_SERVICE_NAME: yt-blog
     steps:
-      - name: Redeploy Railway service
+      - name: Trigger blog deploy workflow
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          GH_TOKEN: ${{ secrets.BLOG_REPO_DISPATCH_TOKEN }}
+          BLOG_REPOSITORY: ytvee/yt-blog
+          POSTS_SHA: ${{ github.sha }}
         run: |
-          if [ -z "$RAILWAY_TOKEN" ]; then
-            echo "Missing required secret: RAILWAY_TOKEN"
+          if [ -z "$GH_TOKEN" ]; then
+            echo "Missing required secret: BLOG_REPO_DISPATCH_TOKEN"
             exit 1
           fi
 
-          railway redeploy \
-            --service "$RAILWAY_SERVICE_NAME" \
-            --yes
+          gh api "repos/$BLOG_REPOSITORY/dispatches" \
+            --method POST \
+            --field event_type=posts_updated \
+            --field client_payload[posts_sha]="$POSTS_SHA" \
+            --field client_payload[source_repository]="$GITHUB_REPOSITORY"
