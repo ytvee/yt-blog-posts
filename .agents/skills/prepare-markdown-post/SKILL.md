@@ -72,6 +72,8 @@ Use the local date at script runtime. Keep exactly 20 empty tag strings. Do not 
 
 ## Anchor Rules
 
+- Use only explicit HTML `a` tags for anchors: `<a id="custom-id"></a>`.
+- Do not use any other anchor format in article bodies, including `{#custom-id}`, `[](){#custom-id}`, named markdown extensions, or heading attributes.
 - Add H2 anchors as `<a id="heading-slug"></a>` on the line immediately before the `##` heading.
 - Do not add anchors for `#`, `###`, or deeper headings unless the user explicitly changes scope.
 - Do not alter heading text to create an anchor.

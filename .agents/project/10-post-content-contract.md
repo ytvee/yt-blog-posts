@@ -69,7 +69,9 @@ Validation rules:
 - Do not use markdown `#` inside the body.
 - The body must start with `##`.
 - Keep markdown headings MDX-safe: do not add inline heading attributes such as `{#custom-id}` to headings.
-- Custom anchors must be separate HTML lines in the exact shape `<a id="custom-id"></a>` immediately before the target `##` heading or term definition.
+- Custom anchors must use only explicit HTML `a` tags: `<a id="custom-id"></a>`.
+- Custom anchors must be separate HTML lines immediately before the target `##` heading or term definition.
+- Do not use any other anchor format, including `{#custom-id}`, markdown-extension anchors, or heading attributes.
 - Heading text must remain plain markdown text without trailing `{...}` anchor syntax.
 - Do not leave placeholder text such as `Draft`, `TBD`, or fake descriptions.
 - Do not leave empty code fences, editor notes, JSON dumps, debug blocks, or technical garbage in the body.
