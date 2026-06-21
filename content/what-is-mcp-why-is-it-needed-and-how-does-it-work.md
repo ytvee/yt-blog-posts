@@ -4,7 +4,7 @@ date: "2026-06-21"
 description: "Сегодня разбираем важную часть архитектуры агентов — MCP-протокол (Model Context Protocol) — и то, как с ним работать."
 tags: ["ai", "искусственный интеллект", "ai ассистент для бизнеса", "mcp протокол", "ai connectors", "интеграция ии", "ии для бизнеса", "mcp сервер", "mcp это", "model context protocol", "github mcp", "mcp server", "mcp claude", "mcp ai", "claude mcp", "ai mcp"]
 readingTime: 6
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1782063035/og_rywswd.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1782063901/ogg_ld5pwt.webp"
 published: true
 ---
 
