@@ -2,7 +2,7 @@
 title: "Что такое MCP, зачем он нужен и как работает"
 date: "2026-06-21"
 description: "Сегодня разбираем важную часть архитектуры агентов — MCP-протокол (Model Context Protocol) — и то, как с ним работать."
-tags: ["ai", "искусственный интеллект", "ai ассистент для бизнеса", "mcp протокол", "ai connectors", "интеграция ии", "ии для бизнеса", "mcp сервер", "mcp это", "model context protocol", "github mcp", "mcp server", "mcp claude", "mcp ai", "claude mcp", "ai mcp", "mcp что это", "mcp простыми словами", "model context protocol что это", "model context protocol простыми словами", "mcp сервер что это", "mcp сервер простыми словами"]
+tags: ["MCP", "Model Context Protocol", "ИИ-агенты", "ИИ для бизнеса", "автоматизация бизнеса", "интеграция ИИ"]
 readingTime: 6
 ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1782063901/ogg_ld5pwt.webp"
 published: true
