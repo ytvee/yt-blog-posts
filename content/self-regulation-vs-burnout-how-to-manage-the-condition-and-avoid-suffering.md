@@ -7,7 +7,7 @@ readingTime: 15
 ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820707/tree_kg0j8m_eiwe4y.webp"
 published: true
 ---
-![self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820707/tree_kg0j8m_eiwe4y.webp)
+![cove-image](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820707/tree_kg0j8m_eiwe4y.webp)
 
 <a id="почему-это-важнее-любого-тайм-менеджмента"></a>
 
