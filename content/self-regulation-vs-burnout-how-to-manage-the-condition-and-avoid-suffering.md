@@ -4,10 +4,10 @@ date: "2026-04-16"
 description: "Личный разбор: как отличить усталость от выгорания, какие внутренние процессы забирают энергию и с чего начать восстановление."
 tags: [ "саморегуляция", "выгорание", "стресс", "работа в IT", "управление вниманием", "профессиональная устойчивость"]
 readingTime: 15
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390123/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering_y6sstd.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820707/tree_kg0j8m_eiwe4y.webp"
 published: true
 ---
-![self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390123/self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering_y6sstd.webp)
+![self-regulation-vs-burnout-how-to-manage-the-condition-and-avoid-suffering](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820707/tree_kg0j8m_eiwe4y.webp)
 
 <a id="почему-это-важнее-любого-тайм-менеджмента"></a>
 
@@ -96,7 +96,7 @@ published: true
 
 Мы пытаемся изменить поведение, не замечая состояния. Пытаемся изменить результат, не замечая мышления. Пытаемся стать эффективнее, не замечая, что внутри уже давно идёт скрытая утечка энергии. Мы работаем с надводной частью айсберга и удивляемся, почему он не меняет направление.
 
-![under-water](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390281/underwater_jkomtx.webp)
+![under-water](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784820706/iceberg-reference-redraw_c1oyep_giuvut.webp)
 
 <a id="процессы"></a>
 
