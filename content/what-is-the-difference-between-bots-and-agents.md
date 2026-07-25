@@ -4,7 +4,7 @@ date: "2026-06-18"
 description: "ИИ-агент — это система, где модель участвует в управлении процессом и его реализации. Она получает задачу(цель), самостоятельно выстраивает шаги по достижению цели и сама же их выполняет."
 tags: ["ИИ-агенты", "чат-боты", "ИИ-боты", "LLM", "ИИ для бизнеса", "автоматизация бизнеса"]
 readingTime: 8
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1781734087/hero_krnvpf.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1784998494/opt-og_zwdx1l.webp"
 published: true
 ---
 
@@ -40,7 +40,7 @@ published: true
 
 ## Главные отличия
 
-![image](https://res.cloudinary.com/dtdrbhksw/image/upload/v1781734045/differents_ezasvm.webp)
+![image](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784998133/opt-hover_j60xa3.webp)
 
 Если совсем коротко:
 
@@ -129,7 +129,7 @@ published: true
 
 ## Что такое ИИ-агент
 
-![ai-agent](https://res.cloudinary.com/dtdrbhksw/image/upload/v1781734045/agent_pilv7k.webp)
+![ai-agent](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784998241/opt-diff_nnwaq9.webp)
 
 **ИИ-агент** — это система на базе языковой модели, которая получает цель, контекст, инструменты и правила, а затем может выполнять шаги для достижения результата.
 
