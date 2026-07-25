@@ -4,15 +4,13 @@ on:
   push:
     branches:
       - main
-    paths:
-      - content/**
-      - media/**
-      - .github/workflows/redeploy-blog.yml
   workflow_dispatch:
 
 concurrency:
   group: notify-blog-production-deploy
   cancel-in-progress: true
+
+permissions: {}
 
 jobs:
   notify:
