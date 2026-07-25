@@ -66,6 +66,8 @@ The `yt-blog` Worker should remain connected to `ytvee/yt-blog` with:
 - deploy command: `npx wrangler deploy`
 - root directory: `/`
 - a Deploy Hook bound to `main`
+- Cloudflare Workers Builds caching disabled so a content-only redeploy cannot
+  restore a stale Next.js Data Cache from an earlier build
 - build-time content credentials configured as secret environment variables
 
 Pushes to `yt-blog/main` continue to deploy through the normal Cloudflare Git
