@@ -18,7 +18,7 @@ published: true
 <div align="center">* * *</div>
 
 <video controls preload="metadata" width="100%">
-  <source src="https://res.cloudinary.com/duyqvi0ig/video/upload/v1781531702/cool_end_ayzkkk.mp4" type="video/mp4" />
+  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1784980028/hi-end_khvbsx.mp4" type="video/mp4" />
 </video>
 
 <div align="center">* * *</div>
@@ -55,11 +55,7 @@ published: true
 
 <div align="center">* * *</div>
 
-![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531555/kids-goa_wdqwet_qutjs0.webp)
-
-<div align="center">* * *</div>
-
-![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531556/lessonss_iyvdpj_h4f6ys.webp)
+![education-feedback-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784980687/feedback_pu1phx.png)
 
 <div align="center">* * *</div>
 
@@ -75,7 +71,7 @@ published: true
 
 <div align="center">* * *</div>
 
-![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531552/lessons_i9ypte_aiib42.webp)
+![education-feedback-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784980822/opt-class_guura5.png)
 
 <div align="center">* * *</div>
 
@@ -87,7 +83,7 @@ published: true
 
 <div align="center">* * *</div>
 
-![education-feedback-1](https://res.cloudinary.com/duyqvi0ig/image/upload/v1781531552/camp-all_zuwwdi_f3tlwf.webp)
+![education-feedback-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784981452/opt-we_qjm9vj.png)
 
 <div align="center">* * *</div>
 
