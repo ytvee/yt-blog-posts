@@ -4,7 +4,7 @@ date: "2026-06-21"
 description: "Сегодня разбираем важную часть архитектуры агентов — MCP-протокол (Model Context Protocol) — и то, как с ним работать."
 tags: ["MCP", "Model Context Protocol", "ИИ-агенты", "ИИ для бизнеса", "автоматизация бизнеса", "интеграция ИИ"]
 readingTime: 6
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1782063901/ogg_ld5pwt.webp"
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1784984598/opt-mcp_hvuino.webp"
 published: true
 ---
 
@@ -33,7 +33,7 @@ published: true
 
 Фактически это не какая-то новая технология, которую нужно бежать и подключать к себе в инфраструктуру. Это всего лишь стандартизированный формат, в котором разные ИИ-сервисы и платформы обмениваются данными и выполняют какие-либо действия.
 
-![mcp](https://res.cloudinary.com/dtdrbhksw/image/upload/v1782055854/mcp_hvbenu.webp)
+![mcp](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784984598/opt-mcp_hvuino.webp)
 
 Другими словами, это протокол, в котором прописано, как ИИ-сервису общаться с внешними инструментами: как находить доступные действия, как передавать параметры, как вызывать нужную функцию и как получать ответ.
 
@@ -91,7 +91,7 @@ published: true
 
 Да, немного душновато. Но без этого легко спутать MCP-сервер с сервером из какого-нибудь дата-центра или слить чувствительные данные в сеть.
 
-![prepare](https://res.cloudinary.com/dtdrbhksw/image/upload/v1782057884/prepare_xlgxf9.webp)
+![prepare](https://res.cloudinary.com/dtdrbhksw/image/upload/v1784984634/opt-model_rlhg0f.webp)
 
 <a id="хост"></a>
 
