@@ -1,6 +1,6 @@
 interface:
   display_name: "Подготовка публикации"
-  short_description: "Проверяет шлюзы и создаёт очередь черновика"
-  default_prompt: "Используй $prepare-publication после моего апрува, чтобы создать очередь доставки статьи."
+  short_description: "Проверяет шлюзы и копирует черновик в content"
+  default_prompt: "Используй $prepare-publication после моего апрува, чтобы скопировать статью из work в content."
 policy:
   allow_implicit_invocation: true

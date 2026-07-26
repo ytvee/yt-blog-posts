@@ -1,7 +1,7 @@
 # Отчёт обучения по утверждённой статье
 
 <!-- LEARNING_CONTRACT
-{"schemaVersion":1,"status":"ready","articleSha256":"6b9c86e13126d7d32bfa20f9415b54f873fff748f3106d92d551374b78ef5275","ledgerSlug":"webdev-agent-kit"}
+{"schemaVersion":1,"status":"ready","articleSha256":"07007d68e839715627c6918cd5569bb832f740792c6e62ed2e9c6574606153c9","ledgerSlug":"webdev-agent-kit"}
 -->
 
 ## Что зафиксировано

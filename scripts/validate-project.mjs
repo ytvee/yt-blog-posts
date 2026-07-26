@@ -4,7 +4,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  assertSlug,
   hashFile,
   parseArticleFrontmatter,
   readJson,
@@ -170,7 +169,7 @@ function validateStructure() {
     "templates",
     "work/articles",
     "scripts/lib",
-    "publication/queue",
+    "content",
     ".github/workflows",
   ];
   const files = [
@@ -182,7 +181,7 @@ function validateStructure() {
     "knowledge/blog-format.md",
     "knowledge/source-policy.md",
     "knowledge/trend-policy.md",
-    "knowledge/target-blog-contract.md",
+    "knowledge/content-publication-contract.md",
     "memory/corrections-log.md",
     "memory/article-ledger.md",
     "memory/diversity-profile.md",
@@ -193,9 +192,7 @@ function validateStructure() {
     "scripts/reading-time.mjs",
     "scripts/publication-gate.mjs",
     "scripts/prepare-publication.mjs",
-    "scripts/publish-queue.mjs",
-    "scripts/complete-publication.mjs",
-    ".github/workflows/publish-approved-articles.yml",
+    ".github/workflows/redeploy-blog.yml",
   ];
   for (const relativePath of directories) {
     const target = path.join(projectRoot, relativePath);
@@ -203,6 +200,14 @@ function validateStructure() {
   }
   for (const relativePath of files) {
     check(existsFile(relativePath), `Нет файла: ${relativePath}`);
+  }
+  for (const obsoletePath of [
+    "publication",
+    "scripts/publish-queue.mjs",
+    "scripts/complete-publication.mjs",
+    ".github/workflows/publish-approved-articles.yml",
+  ]) {
+    check(!fs.existsSync(path.join(projectRoot, obsoletePath)), `Остался устаревший путь: ${obsoletePath}`);
   }
 }
 
@@ -288,7 +293,8 @@ function validateContracts() {
   const trends = read(".agents/skills/trend-research/SKILL.md");
   const headlines = read("knowledge/headline-policy.md");
   const prepare = read(".agents/skills/prepare-publication/SKILL.md");
-  const workflow = read(".github/workflows/publish-approved-articles.yml");
+  const workflow = read(".github/workflows/redeploy-blog.yml");
+  const contentContract = read("knowledge/content-publication-contract.md");
   check(
     agents.includes("trend-research") &&
       agents.includes("knowledge/trend-policy.md") &&
@@ -326,11 +332,22 @@ function validateContracts() {
     learn.includes("статусом `candidate`") && learn.includes("статус на `promoted`"),
     "learn-from-edits: нет повышения правила",
   );
-  check(prepare.includes("--approved-by user"), "prepare-publication: нет явного апрува");
   check(
-    workflow.includes("YT_BLOG_POSTS_TOKEN") &&
-      workflow.indexOf("Push target drafts") < workflow.indexOf("Remove delivered source work"),
-    "Workflow: очистка не защищена успешным target push",
+    prepare.includes("--approved-by user") &&
+      prepare.includes("content/<slug>.md") &&
+      !prepare.includes("--english-slug"),
+    "prepare-publication: неверный локальный контракт",
+  );
+  check(
+    workflow.includes("posts_updated") && workflow.includes("BLOG_REPO_DISPATCH_TOKEN"),
+    "Workflow: нет уведомления сайта об изменении постов",
+  );
+  check(
+    agents.includes("Не читать лежащие там посты") &&
+      write.includes("Никогда не читать файлы") &&
+      trends.includes("Не читать `../../../content/`") &&
+      contentContract.includes("только выходом публикационного процесса"),
+    "content/: не зафиксирован запрет на использование постов как референсов",
   );
 }
 
@@ -340,22 +357,6 @@ function validateConfiguration() {
       "834929e9726744e8be81a0f395098a5844cf5ef589429fa1a063f11c970f1fde",
     ".vscode/settings.json был изменён",
   );
-}
-
-function validateQueue() {
-  const queueRoot = path.join(projectRoot, "publication", "queue");
-  if (!fs.existsSync(queueRoot)) return;
-  for (const entry of fs.readdirSync(queueRoot, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    try {
-      assertSlug(entry.name, "Slug очереди");
-      const manifest = readJson(path.join(queueRoot, entry.name, "manifest.json"));
-      check(manifest.target?.path === `content/${entry.name}.md`, `${entry.name}: target path не совпадает`);
-      check(manifest.approval?.approvedBy === "user", `${entry.name}: нет апрува`);
-    } catch (error) {
-      errors.push(`Очередь ${entry.name}: ${error.message}`);
-    }
-  }
 }
 
 function validateArticleFile(input) {
@@ -411,7 +412,6 @@ validateVendorLock();
 validateExamples();
 validateContracts();
 validateConfiguration();
-validateQueue();
 
 try {
   errors.push(...articleIssues(read("templates/blog-post.md"), "templates/blog-post.md", true));

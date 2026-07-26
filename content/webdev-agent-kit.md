@@ -2,9 +2,9 @@
 title: "Как я собрал WebDev Agent Kit, чтобы нейронка не переписывала лишнее"
 date: "2026-07-26"
 description: "Как повторяющиеся проблемы на код-ревью привели меня к собственному набору правил для фронтенд-агентов."
-tags: ["ИИ-разработка", "frontend", "React", "Next.js", "AI-агенты"]
+tags: ["ИИ-разработка", "frontend", "React", "Next.js", "AI-агенты", "ai news"]
 readingTime: 4
-ogImage: ""
+ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1785080056/opt-webdev-agent-kit-cover_htpxdt.webp"
 published: false
 ---
 

@@ -5,8 +5,6 @@ node_modules/
 .env.*
 !.env.example
 .seo-cache/
-publication/results/
-_target/
 .tmp-*/
 *.tmp
 .DS_Store

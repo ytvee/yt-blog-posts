@@ -1,8 +1,8 @@
 {
-  "name": "yt-writer",
+  "name": "yt-blog-posts",
   "version": "1.0.0",
   "private": true,
-  "description": "Локальный конвейер подготовки и доставки статей ytdev.me",
+  "description": "Подготовка и хранение статей ytdev.me",
   "type": "module",
   "engines": {
     "node": ">=24 <25"
