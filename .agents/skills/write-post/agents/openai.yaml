@@ -1,0 +1,6 @@
+interface:
+  display_name: "Написать статью"
+  short_description: "Пишет статьи для блога в авторском стиле"
+  default_prompt: "Используй $write-post, чтобы превратить тему или мои заметки в черновик статьи."
+policy:
+  allow_implicit_invocation: true

@@ -1,2 +1,13 @@
-.codex
-.vscode
+.playwright-mcp/
+shared-chat-snapshot.md
+node_modules/
+.env
+.env.*
+!.env.example
+.seo-cache/
+publication/results/
+_target/
+.tmp-*/
+*.tmp
+.DS_Store
+Thumbs.db

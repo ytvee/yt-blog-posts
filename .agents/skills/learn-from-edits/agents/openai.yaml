@@ -1,0 +1,6 @@
+interface:
+  display_name: "Запомнить правки"
+  short_description: "Закрепляет повторяющиеся редакторские правила"
+  default_prompt: "Используй $learn-from-edits, чтобы сравнить версии статьи и обновить память о моих предпочтениях."
+policy:
+  allow_implicit_invocation: true

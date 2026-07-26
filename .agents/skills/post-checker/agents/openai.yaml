@@ -1,4 +1,0 @@
-interface:
-  display_name: "Post Checker"
-  short_description: "Report-only grammar and fact checker"
-  default_prompt: "Use $post-checker to proofread and fact-check a markdown article without editing it."

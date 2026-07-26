@@ -1,0 +1,6 @@
+interface:
+  display_name: "Обучение по статье"
+  short_description: "Запоминает голос и планирует разнообразие текстов"
+  default_prompt: "Используй $learn-from-article, чтобы сохранить выводы из утверждённой статьи."
+policy:
+  allow_implicit_invocation: true

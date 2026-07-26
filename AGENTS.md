@@ -1,126 +1,61 @@
-# Posts-Only Repo Rules
+# YT Writer
 
-This repository stores blog posts, writing instructions, source research rules, and publishing workflow documentation. It is not the blog application repository.
+Локальный проект для подготовки русскоязычных статей `ytdev.me`: от авторского брифа и исследования источников до доставки утверждённого черновика в репозиторий постов.
 
-## Role Model
+## Приоритеты
 
-Act as a senior editorial/workflow engineer for a posts-only text system. Your job is to keep writing workflows, source handling, style adaptation, QA, and repo-local agent instructions practical, scoped, and easy to reuse without assuming any external blog application code.
+1. Выполнять текущую просьбу пользователя и учитывать его явные правки.
+2. Сохранять переданные факты, числа, цитаты, личные истории и авторскую позицию.
+3. Следовать подтверждённым правилам из `knowledge/author-style.md`.
+4. Применять `knowledge/headline-policy.md`: превращать широкую тему в один конкретный вопрос, результат, конфликт или практическую ситуацию.
+5. Выполнять `knowledge/trend-policy.md`: актуальные темы искать только в Hacker News и подтверждать баллами и числом комментариев.
+6. Применять `knowledge/editorial-policy.md`, не выравнивая текст до безличного «идеального» стиля.
+7. Не выдумывать опыт автора, источники, цитаты, результаты, поисковые запросы, частотности, метрики обсуждения, мотивы и причинно-следственные связи.
 
-## Non-Negotiable Scope Rule
+Если критически важной информации нет, задать один короткий вопрос. Если пробел не мешает работе, явно отметить допущение в брифе и продолжить.
 
-Every prompt must be interpreted only inside the currently open project workspace.
+## Маршрутизация
 
-- Work only with files that belong to this repository.
-- Do not inspect unrelated local folders, sibling repositories, or random files on the computer.
-- Do not silently switch project context because another repository may contain similar files.
-- Do not browse for unrelated local context unless the user explicitly changes the project scope.
+- Поиск актуальных и наиболее обсуждаемых тем — использовать `trend-research`. Для обнаружения тем не использовать новостные сайты, корпоративные блоги, обычную поисковую выдачу и знания модели.
+- Новая статья из темы, заметок, брифа или расшифровки — использовать `write-post`.
+- Правки существующей статьи — использовать `revise-post`.
+- Анализ принятой редакции и обновление памяти — использовать `learn-from-edits`.
+- После применения пользовательских правок запускать `learn-from-edits`, если пользователь явно не попросил ничего не запоминать.
+- Перед апрувом — использовать `plan-article-images`.
+- После явного апрува — использовать `learn-from-article`, затем `prepare-publication`.
 
-## Required Reading Order
+Загружать только материалы, которые нужны текущему навыку. Не читать все примеры при каждом запросе.
 
-Always start with the context-optimized map:
+## Редакторский порядок
 
-- `.agents/SUMMARY.md`
+При конфликте правил соблюдать порядок: факты и правки пользователя → авторский голос → формат блога → `ru-text` → рекомендации `humanizer-ru`.
 
-Before doing the task, analyze the prompt and classify the intent. Then inspect repo-local skills under `.agents/skills/**/SKILL.md`, choose the matching skill or skills yourself, and load the selected skill bodies. The user does not need to name a skill explicitly. If no current skill matches, use `.agents/SUMMARY.md`, `.agents/project/**`, `.agents/data/**`, and `.agents/templates/**` directly.
+- `ru-text` использовать для русской типографики и информационного стиля.
+- `humanizer-ru` использовать только как ручной аудит уже написанной статьи. Не применять его для обхода детекторов, не добавлять ошибки и не заменять нормативное тире дефисом.
+- Python-сканер `humanizer-ru` в этом проекте не запускать: Python и его зависимости не входят в окружение.
 
-For any post drafting, revision, adaptation, source, or QA task, read this required minimum:
+## Рабочие файлы
 
-- `.agents/project/00-repo-purpose.md`
-- `.agents/project/10-post-content-contract.md`
-- `.agents/project/20-writing-workflow.md`
-- `.agents/project/50-output-contracts.md`
-- `.agents/project/60-final-qa-gates.md`
-- `.agents/data/valid-writing-patterns.md`
-- `.agents/data/banned-ai-patterns.md`
+Каждая статья хранится в `work/articles/<latin-kebab-slug>/`:
 
-Then load task-specific references from `.agents/SUMMARY.md`.
+- `brief.md` — задача, исходные материалы, факты и ограничения;
+- `current.md` — актуальная версия;
+- `revisions/000-initial.md` — неизменяемый снимок самого первого черновика;
+- `revisions/<NNN>-before.md` и `revisions/<NNN>-after.md` — полные версии до и после каждого круга правок;
+- `revisions/<NNN>-feedback.md` — исходный отзыв к соответствующему кругу;
+- `media-plan.md` — роли, места и ассоциации для изображений;
+- `learning-report.md` — выводы об авторском голосе перед постановкой в очередь.
 
-Read deeper references only when the task needs them:
+Снимки в `revisions/` не перезаписывать и не удалять. Перед новым кругом правок сохранять актуальный `current.md` как `<NNN>-before.md`, после правок — итоговый `current.md` как `<NNN>-after.md`. Так последняя и предпоследняя версии всегда остаются отдельными файлами, а более ранняя история сохраняется полностью.
 
-- source discovery and article ingestion: `.agents/project/22-idea-generation-with-sources.md`, `.agents/project/30-source-research-policy.md`, `.agents/data/source-sites.md`, `.agents/data/blog-categories.md`
-- drafting and style work: `.agents/project/40-style-profile.md`, `.agents/templates/writing-style-guide.md`, `.agents/data/brand-profile.md`, focused anti-AI reference files listed in `.agents/data/banned-ai-patterns.md`
-- sync and redeploy work: `.agents/project/70-sync-with-blog-app.md`, `.agents/project/80-redeploy-workflow.md`
-- platform adaptation: relevant `.agents/data/social-platform-*.md` profile
+Черновики всегда имеют `published: false`. Любое изменение `current.md` аннулирует прежний медиаплан и отчёт обучения по несовпадению SHA-256.
 
-Use these shared data references when the task needs them:
+Перед завершением проверять статью командой:
 
-- `.agents/data/blog-categories.md`
-- `.agents/data/source-sites.md`
-- `.agents/data/style-examples-index.md`
+```powershell
+node scripts/validate-project.mjs work/articles/<slug>/current.md
+```
 
-Current repo-local skills:
+Не создавать `publication/queue/<english-slug>/`, пока пользователь явно не утвердил статью. После ручного push в `main` GitHub Action доставит очередь в `ytvee/yt-blog-posts` и удалит рабочий каталог только после успешного target push.
 
-- `.agents/skills/create-text-skills/SKILL.md`: use for creating, updating, auditing, merging, splitting, or refactoring text/editorial workflow skills.
-- `.agents/skills/prepare-markdown-post/SKILL.md`: use for preparing markdown posts without rewriting visible text, including frontmatter, blank-line cleanup, anchors, SEO description, and reading time.
-- `.agents/skills/post-checker/SKILL.md`: use for safe language auto-fixes and web-sourced factual checks of markdown posts; grammar, syntax, typos, punctuation, casing, spacing, and ё/Ё are auto-fixed for local markdown files, while factual and meaning changes remain report-only.
-- `.agents/skills/telegram-post-adapter/SKILL.md`: use for adapting a topic and source article into a Russian Telegram post for SEO distribution in the author's voice.
-
-Article checking and processing flow:
-
-- For prompts like `проверь статью`, `проверь текст`, or `вычитай статью`, use `post-checker`; automatically apply safe language fixes to local markdown files and return a compact report or `Все ок.`.
-- For prompts like `проверь факты`, use `post-checker`; factual findings are report-only unless the user separately approves specific factual edits.
-- For prompts like `обработай статью`, `подготовь статью`, or `прогони статью`, first analyze the article and state a plan, then use `prepare-markdown-post`, then use `post-checker` for safe language auto-fixes and factual report-only checks, then verify each stage against the plan.
-- For prompts like `сделай пост для телеграма`, `адаптируй статью в телеграм`, or `сделай SEO-дистрибуцию`, use `telegram-post-adapter`; return the adapted post in the response by default and do not create files unless explicitly asked.
-- If the article path is not explicit, use the active IDE file when it is under `content/*.md`; otherwise ask for the target article path.
-- Do not apply factual, stylistic, SEO, structural, or meaning changes from `post-checker` unless the user separately approves specific edits.
-
-## Definition Of Done
-
-A task is done only when all of the following are true:
-
-- the output matches the mirrored post contract in this repo
-- the output format matches `.agents/project/50-output-contracts.md`
-- the post passes `.agents/project/60-final-qa-gates.md`
-- missing user data is left as `TODO(USER): ...` instead of being invented
-- no assumptions are made about application code that is not present in this repo
-- no work escapes the current repository scope
-
-## Reading Time Rule
-
-Agents must calculate `readingTime` with the repository script, not by guessing.
-
-- Command: `python3 scripts/calc_reading_time.py content/<slug>.md`
-- Input: path to the markdown article file
-- Output: integer number of minutes to place into frontmatter
-- Calculate `readingTime` only at the very end, when the article body is already final and ready to return.
-- If the article changes after the calculation, run the script again and update `readingTime` before final output.
-- Formula:
-  - readable character count divided by `1500`
-  - plus `0.2` minutes for each image
-  - round up only when the fractional part is `0.3` or higher
-  - keep the minimum result at `1`
-- Use `python3 scripts/calc_reading_time.py content/<slug>.md --details` when the agent needs to inspect the breakdown.
-
-## Do
-
-- treat this repository as content-only and posts-only
-- work only with posts, templates, workflow docs, source lists, and writing instructions in this repo
-- treat the app contract documented here as mirrored/manual-sync information
-- keep one markdown file per post under `content/`
-- leave explicit `TODO(USER): ...` markers where user input is required
-- keep outputs practical, reviewable, and easy to edit by hand
-- use the brand profile, category map, source map, and style guide for all editorial decisions
-- always enforce `.agents/data/valid-writing-patterns.md` and `.agents/data/banned-ai-patterns.md` before returning drafts, revisions, adaptations, or final markdown
-
-## Do Not
-
-- do not assume Next.js code, runtime files, components, or validators exist in this repo
-- do not claim you verified application behavior from this repository
-- do not invent site sources, style preferences, user defaults, or app behavior
-- do not drift into another local repository or search the wider computer for guidance
-- do not add build, lint, test, or CI instructions that are not actually present here
-- do not add frontmatter keys beyond the mirrored contract
-
-## Authority Model
-
-Use this precedence order when files overlap:
-
-1. `AGENTS.md`
-2. `.agents/project/*`
-3. `.agents/templates/*`
-4. `.agents/data/*`
-5. `posts.md` as a pointer only
-
-## Mirrored Contract Note
-
-The blog app contract in this repository is stored in mirrored form based on user-provided information. It may become outdated if the external blog app changes. When the app contract changes, the mirrored files in this repo must be manually synced.
+Все инструкции, брифы, журналы и ответы писать на русском. Технические имена файлов и папок оставлять на латинице.

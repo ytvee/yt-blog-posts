@@ -1,0 +1,6 @@
+interface:
+  display_name: "Медиаплан статьи"
+  short_description: "Расставляет заглушки и готовит образы для картинок"
+  default_prompt: "Используй $plan-article-images, чтобы расставить IMAGE_SLOT и подготовить медиаплан."
+policy:
+  allow_implicit_invocation: true

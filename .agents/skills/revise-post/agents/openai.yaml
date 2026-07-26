@@ -1,0 +1,6 @@
+interface:
+  display_name: "Исправить статью"
+  short_description: "Применяет правки и сохраняет версии статьи"
+  default_prompt: "Используй $revise-post, чтобы применить мои правки к текущей статье и сохранить версии."
+policy:
+  allow_implicit_invocation: true

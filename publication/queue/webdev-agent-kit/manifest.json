@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "repository": "ytvee/yt-blog-posts",
+    "branch": "main",
+    "path": "content/webdev-agent-kit.md",
+    "siteUrl": "https://www.ytdev.me/blog/webdev-agent-kit"
+  },
+  "source": {
+    "slug": "webdev-agent-kit",
+    "workPath": "work/articles/webdev-agent-kit",
+    "articlePath": "work/articles/webdev-agent-kit/current.md"
+  },
+  "articleSha256": "6b9c86e13126d7d32bfa20f9415b54f873fff748f3106d92d551374b78ef5275",
+  "media": {
+    "planPath": "work/articles/webdev-agent-kit/media-plan.md",
+    "planSha256": "97af707ac2be47f14979761f60d293a1f4d28ee88fd4f1f1dbfa49b9beaae8bc",
+    "status": "ready"
+  },
+  "learning": {
+    "reportPath": "work/articles/webdev-agent-kit/learning-report.md",
+    "reportSha256": "17a3cfb91fe339efc6d1e4c7632be19cc72e0d2c1fb5ea785e259407824159f2",
+    "status": "ready"
+  },
+  "approval": {
+    "approvedBy": "user",
+    "approvedAt": "2026-07-26T14:02:59.894Z"
+  }
+}

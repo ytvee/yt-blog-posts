@@ -1,4 +1,0 @@
-interface:
-  display_name: "Prepare Markdown Post"
-  short_description: "Prepare markdown posts without rewriting text"
-  default_prompt: "Use $prepare-markdown-post to prepare a markdown article with frontmatter, anchors, SEO description, and reading time."

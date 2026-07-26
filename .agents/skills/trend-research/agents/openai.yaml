@@ -1,0 +1,6 @@
+interface:
+  display_name: "Поиск актуальных тем"
+  short_description: "Ищет обсуждаемые темы в HN, X и Reddit"
+  default_prompt: "Используй $trend-research, чтобы найти самые обсуждаемые темы для следующей статьи."
+policy:
+  allow_implicit_invocation: true

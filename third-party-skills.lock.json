@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    {
+      "name": "ru-text",
+      "repository": "https://github.com/talkstream/ru-text",
+      "path": "skills/ru-text",
+      "commit": "9d7123183e91b94c762b7e3aa31ba1b981fb2b42",
+      "license": "MIT"
+    },
+    {
+      "name": "humanizer-ru",
+      "repository": "https://github.com/ilyautov/humanizer-ru",
+      "path": "skills/humanizer-ru",
+      "commit": "9a941722fcc44c446732cd77dfce31ffd3446040",
+      "license": "MIT"
+    }
+  ]
+}

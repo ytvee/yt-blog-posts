@@ -1,4 +1,0 @@
-interface:
-  display_name: "Create Text Skills"
-  short_description: "Author repo-local text workflow skills"
-  default_prompt: "Use $create-text-skills to design a concise repo-local skill for a text workflow."
