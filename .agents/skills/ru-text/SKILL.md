@@ -21,6 +21,10 @@ Credits and recommended reading: `references/sources.md`
 
 **Reviewing vs. rewriting**: when *checking* or proofreading existing text or a file, return the corrected version plus a list of changes — do not silently overwrite the source file. Rewrite a file in place only when the user explicitly asks.
 
+## YT Writer
+
+При работе со статьями этого репозитория полностью прочитать `../../../knowledge/neuroslop-antipatterns.md` и проверить текст по нему. Проектные антипаттерны сильнее общих примеров этого навыка.
+
 ## Always-On: Typography
 
 Apply these rules to ALL Russian text output without exception.
