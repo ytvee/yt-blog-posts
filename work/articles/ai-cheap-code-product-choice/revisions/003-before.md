@@ -2,9 +2,9 @@
 title: "Зачем мы запускаем бесплатное chrome-расширение"
 date: "2026-07-27"
 description: "Как мы выбирали идею и почему решили попробовать зайти в красный рынок"
-tags: ["искусственный интеллект", "Chrome-расширения", "продуктовое мышление", "микропродукты", "личный опыт"]
-readingTime: 4
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1785174616/page2file-converter-cube-ink_e7fi42.png"
+tags: ["искусственный интеллект", "Chrome-расширения", "продуктовое мышление", "микропродукты"]
+readingTime: 5
+ogImage: ""
 published: false
 ---
 

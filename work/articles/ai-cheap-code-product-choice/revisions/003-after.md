@@ -4,9 +4,11 @@ date: "2026-07-27"
 description: "Как мы выбирали идею и почему решили попробовать зайти в красный рынок"
 tags: ["искусственный интеллект", "Chrome-расширения", "продуктовое мышление", "микропродукты", "личный опыт"]
 readingTime: 4
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1785174616/page2file-converter-cube-ink_e7fi42.png"
+ogImage: ""
 published: false
 ---
+
+<!-- IMAGE_SLOT id="img-01" role="hero" ratio="16:9" alt="Веб-страница проходит через модульный конвертер и превращается в PDF и презентацию" association="Модульный конвертер page2file между веб-страницей и двумя файлами" -->
 
 <div align="center">* * *</div>
 

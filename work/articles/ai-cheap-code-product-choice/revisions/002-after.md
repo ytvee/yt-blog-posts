@@ -1,10 +1,10 @@
 ---
-title: "Зачем мы запускаем бесплатное chrome-расширение"
+title: "ИИ ускорил разработку. Зачем мы запускаем page2file бесплатно"
 date: "2026-07-27"
-description: "Как мы выбирали идею и почему решили попробовать зайти в красный рынок"
-tags: ["искусственный интеллект", "Chrome-расширения", "продуктовое мышление", "микропродукты", "личный опыт"]
-readingTime: 4
-ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1785174616/page2file-converter-cube-ink_e7fi42.png"
+description: "Как мы выбрали конвертер веб-страниц, почему сомневаемся в нише и что хотим узнать после бесплатного запуска."
+tags: ["искусственный интеллект", "Chrome-расширения", "продуктовое мышление", "микропродукты"]
+readingTime: 3
+ogImage: ""
 published: false
 ---
 
@@ -33,7 +33,7 @@ published: false
 
 Но решение уже приняли. Теперь надо не думать, а делать и смотреть на обратную связь. Мы же увидели поисковый интерес… Почему бы и не попробовать собрать органический трафик?
 
-![google-image-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1785173783/opt-popularity-card-transparent_jtfmgx.webp)
+<!-- GOOGLE_TRENDS_SCREENSHOT: авторский скриншот Google Trends для перечисленных ниже запросов; проверить регион, период и дату перед медиапланом -->
 
 Поскольку рынок западный, запросы смотрели в Google Trends. Сбор семантики начали с шести запросов.
 
@@ -43,8 +43,6 @@ published: false
 - `web to pdf`
 - `web to pptx`
 - `page to file`
-
-![google-image-1](https://res.cloudinary.com/dtdrbhksw/image/upload/v1785173578/opt-region-breakdown-card-transparent_fhrahf.webp)
 
 <a id="one-task-first"></a>
 
