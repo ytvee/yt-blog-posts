@@ -8,7 +8,7 @@ ogImage: ""
 published: false
 ---
 
-<!-- IMAGE_SLOT id="img-01" role="hero" alt="{{HERO_ALT}}" association="{{HERO_IDEA}}" -->
+<!-- IMAGE_SLOT id="img-01" role="hero" ratio="16:9" alt="{{HERO_ALT}}" association="{{HERO_IDEA}}" -->
 
 <div align="center">* * *</div>
 

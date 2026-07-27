@@ -1,6 +1,6 @@
 interface:
   display_name: "Медиаплан статьи"
-  short_description: "Расставляет заглушки и готовит образы для картинок"
-  default_prompt: "Используй $plan-article-images, чтобы расставить IMAGE_SLOT и подготовить медиаплан."
+  short_description: "Планирует 16:9 иллюстрации и квадратную OG"
+  default_prompt: "Используй $plan-article-images, чтобы расставить горизонтальные IMAGE_SLOT, связать hero с квадратной OG и подготовить полные промпты."
 policy:
   allow_implicit_invocation: true

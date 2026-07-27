@@ -155,6 +155,9 @@ function articleIssues(text, label, allowTemplate = false) {
     if (!attrs.role || !attrs.alt || !attrs.association) {
       issues.push(`${label}: IMAGE_SLOT ${attrs.id ?? ""} заполнен не полностью`);
     }
+    if (attrs.role !== "video" && attrs.ratio !== "16:9") {
+      issues.push(`${label}: IMAGE_SLOT ${attrs.id ?? ""} должен иметь ratio="16:9"`);
+    }
   }
   return issues;
 }
@@ -188,6 +191,7 @@ function validateStructure() {
     "templates/article-brief.md",
     "templates/blog-post.md",
     "templates/media-plan.md",
+    ".agents/skills/plan-article-images/references/editorial-ink-prompts.md",
     "third-party-skills.lock.json",
     "scripts/reading-time.mjs",
     "scripts/publication-gate.mjs",
@@ -292,6 +296,10 @@ function validateContracts() {
   const learn = read(".agents/skills/learn-from-edits/SKILL.md");
   const trends = read(".agents/skills/trend-research/SKILL.md");
   const headlines = read("knowledge/headline-policy.md");
+  const imagePlan = read(".agents/skills/plan-article-images/SKILL.md");
+  const imagePrompts = read(".agents/skills/plan-article-images/references/editorial-ink-prompts.md");
+  const blogFormat = read("knowledge/blog-format.md");
+  const mediaTemplate = read("templates/media-plan.md");
   const prepare = read(".agents/skills/prepare-publication/SKILL.md");
   const workflow = read(".github/workflows/redeploy-blog.yml");
   const contentContract = read("knowledge/content-publication-contract.md");
@@ -331,6 +339,26 @@ function validateContracts() {
   check(
     learn.includes("статусом `candidate`") && learn.includes("статус на `promoted`"),
     "learn-from-edits: нет повышения правила",
+  );
+  check(
+    imagePlan.includes("references/editorial-ink-prompts.md") &&
+      imagePlan.includes('ratio="16:9"') &&
+      imagePlan.includes('ratio: "1:1"') &&
+      imagePlan.includes("Не ждать отдельного запроса пользователя"),
+    "plan-article-images: неполный контракт форматов и промптов",
+  );
+  check(
+    imagePrompts.includes("чёрной гелевой ручкой") &&
+      imagePrompts.includes("10–12%") &&
+      imagePrompts.includes("Квадратная OG-картинка") &&
+      imagePrompts.includes("Доказательные материалы"),
+    "plan-article-images: неполный справочник визуального стиля",
+  );
+  check(
+    blogFormat.includes('ratio="16:9"') &&
+      mediaTemplate.includes('"schemaVersion": 2') &&
+      mediaTemplate.includes('"ratio": "1:1"'),
+    "Медиаформат: не закреплены IMAGE_SLOT 16:9 и OG 1:1",
   );
   check(
     prepare.includes("--approved-by user") &&
@@ -402,6 +430,22 @@ published: false
   check(
     articleIssues(valid.replace("## Раздел", "# H1"), "self-test").length > 0,
     "Self-test: H1 в теле принят",
+  );
+  const validWithImage = valid.replace(
+    "## Раздел",
+    '<!-- IMAGE_SLOT id="img-01" role="hero" ratio="16:9" alt="Схема" association="Конвейер" -->\n\n## Раздел',
+  );
+  check(
+    articleIssues(validWithImage, "self-test").length === 0,
+    "Self-test: валидный IMAGE_SLOT 16:9 отклонён",
+  );
+  check(
+    articleIssues(validWithImage.replace(' ratio="16:9"', ""), "self-test").length > 0,
+    "Self-test: IMAGE_SLOT без ratio принят",
+  );
+  check(
+    articleIssues(validWithImage.replace('ratio="16:9"', 'ratio="1:1"'), "self-test").length > 0,
+    "Self-test: квадратный IMAGE_SLOT внутри статьи принят",
   );
   check(readingTimeDetails(valid).minutes === 1, "Self-test: ошибка readingTime");
 }

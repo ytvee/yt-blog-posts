@@ -45,7 +45,8 @@ function safeRemove(target, parent) {
   if (fs.existsSync(resolved)) fs.rmSync(resolved, { recursive: true });
 }
 
-function article(extra = "") {
+function article(extra = "", ratio = "16:9") {
+  const ratioAttribute = ratio === null ? "" : ` ratio="${ratio}"`;
   return `---
 title: "Как устроен редакторский конвейер"
 date: "2026-07-26"
@@ -56,7 +57,7 @@ ogImage: ""
 published: false
 ---
 
-<!-- IMAGE_SLOT id="img-01" role="hero" alt="Схема редакторского конвейера" association="Последовательная сборка материала" -->
+<!-- IMAGE_SLOT id="img-01" role="hero"${ratioAttribute} alt="Схема редакторского конвейера" association="Последовательная сборка материала" -->
 
 Короткое авторское вступление.
 
@@ -66,7 +67,10 @@ published: false
 `;
 }
 
-function writeContracts(articleHash) {
+function writeContracts(articleHash, options = {}) {
+  const slotRatio = options.slotRatio ?? "16:9";
+  const ogRatio = options.ogRatio ?? "1:1";
+  const ogLinkedSlotId = options.ogLinkedSlotId ?? "img-01";
   fs.writeFileSync(
     path.join(sourceDir, "media-plan.md"),
     `# Медиаплан
@@ -74,12 +78,18 @@ function writeContracts(articleHash) {
 <!-- MEDIA_CONTRACT
 ${JSON.stringify(
   {
-    schemaVersion: 1,
+    schemaVersion: 2,
     status: "ready",
     articleSha256: articleHash,
+    ogImage: {
+      ratio: ogRatio,
+      linkedSlotId: ogLinkedSlotId,
+      association: "Последовательная сборка материала",
+    },
     slots: [{
       id: "img-01",
       role: "hero",
+      ratio: slotRatio,
       alt: "Схема редакторского конвейера",
       association: "Последовательная сборка материала",
     }],
@@ -129,6 +139,48 @@ try {
   run("prepare-publication.mjs", ["--slug", slug], { expectFailure: true });
   assert(!fs.existsSync(targetPath), "Файл создан без явного апрува");
 
+  run("publication-gate.mjs", ["check", "--slug", slug]);
+
+  fs.writeFileSync(articlePath, article("", null), "utf8");
+  run("reading-time.mjs", [`work/articles/${slug}/current.md`, "--write"]);
+  writeContracts(hashFile(articlePath));
+  let failure = run("publication-gate.mjs", ["check", "--slug", slug], {
+    expectFailure: true,
+  });
+  assert(failure.stderr.includes('должен иметь ratio="16:9"'), "Не проверяется отсутствующий ratio");
+
+  fs.writeFileSync(articlePath, article("", "1:1"), "utf8");
+  run("reading-time.mjs", [`work/articles/${slug}/current.md`, "--write"]);
+  writeContracts(hashFile(articlePath), { slotRatio: "1:1" });
+  failure = run("publication-gate.mjs", ["check", "--slug", slug], {
+    expectFailure: true,
+  });
+  assert(failure.stderr.includes('должен иметь ratio="16:9"'), "Не отклонён квадратный слот статьи");
+
+  fs.writeFileSync(articlePath, article(), "utf8");
+  run("reading-time.mjs", [`work/articles/${slug}/current.md`, "--write"]);
+  writeContracts(hashFile(articlePath), { slotRatio: "1:1" });
+  failure = run("publication-gate.mjs", ["check", "--slug", slug], {
+    expectFailure: true,
+  });
+  assert(failure.stderr.includes("ratio не совпадает с медиапланом"), "Не проверяется ratio медиаплана");
+
+  writeContracts(hashFile(articlePath), { ogRatio: "16:9" });
+  failure = run("publication-gate.mjs", ["check", "--slug", slug], {
+    expectFailure: true,
+  });
+  assert(failure.stderr.includes('OG-картинка должна иметь ratio="1:1"'), "Не отклонена горизонтальная OG");
+
+  writeContracts(hashFile(articlePath), { ogLinkedSlotId: "img-99" });
+  failure = run("publication-gate.mjs", ["check", "--slug", slug], {
+    expectFailure: true,
+  });
+  assert(
+    failure.stderr.includes("OG-картинка должна быть связана с существующим hero 16:9"),
+    "Не проверяется связь OG с hero",
+  );
+
+  writeContracts(hashFile(articlePath));
   run("publication-gate.mjs", ["check", "--slug", slug]);
   run("prepare-publication.mjs", ["--slug", slug, "--approved-by", "user"]);
   assert(fs.existsSync(targetPath), "Целевой файл не создан");

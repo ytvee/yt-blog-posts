@@ -52,18 +52,52 @@ export function checkPublicationPrerequisites(slug) {
     if (!slot.role || !slot.alt || !slot.association) {
       errors.push(`IMAGE_SLOT ${slot.id ?? "без id"} заполнен не полностью`);
     }
+    if (slot.role !== "video" && slot.ratio !== "16:9") {
+      errors.push(`IMAGE_SLOT ${slot.id ?? "без id"} должен иметь ratio="16:9"`);
+    }
   }
 
   const mediaPath = path.join(articleDir, "media-plan.md");
   try {
     const media = extractContract(fs.readFileSync(mediaPath, "utf8"), "MEDIA_CONTRACT");
+    if (media.schemaVersion !== 2) errors.push("Медиаплан должен иметь schemaVersion 2");
     if (media.status !== "ready") errors.push("Медиаплан имеет status не ready");
     if (media.articleSha256 !== articleHash) {
       errors.push("Медиаплан относится к другой версии статьи");
     }
-    const mediaIds = new Set((media.slots ?? []).map((slot) => slot.id));
+    const mediaSlots = Array.isArray(media.slots) ? media.slots : [];
+    const mediaIds = new Set(mediaSlots.map((slot) => slot.id));
     if (mediaIds.size !== slotIds.size || [...slotIds].some((id) => !mediaIds.has(id))) {
       errors.push("IMAGE_SLOT в статье и медиаплане не совпадают");
+    }
+    const mediaById = new Map(mediaSlots.map((slot) => [slot.id, slot]));
+    for (const slot of slots) {
+      const mediaSlot = mediaById.get(slot.id);
+      if (!mediaSlot) continue;
+      for (const attribute of ["role", "alt", "association"]) {
+        if (mediaSlot[attribute] !== slot[attribute]) {
+          errors.push(`IMAGE_SLOT ${slot.id}: ${attribute} не совпадает с медиапланом`);
+        }
+      }
+      if (slot.role !== "video" && mediaSlot.ratio !== slot.ratio) {
+        errors.push(`IMAGE_SLOT ${slot.id}: ratio не совпадает с медиапланом`);
+      }
+    }
+    const ogImage = media.ogImage;
+    if (!ogImage || ogImage.ratio !== "1:1") {
+      errors.push('OG-картинка должна иметь ratio="1:1"');
+    } else {
+      const linkedHero = slots.find(
+        (slot) =>
+          slot.id === ogImage.linkedSlotId &&
+          slot.role === "hero" &&
+          slot.ratio === "16:9",
+      );
+      if (!linkedHero) {
+        errors.push("OG-картинка должна быть связана с существующим hero 16:9");
+      } else if (!ogImage.association || ogImage.association !== linkedHero.association) {
+        errors.push("OG-картинка и связанный hero должны иметь одну association");
+      }
     }
   } catch (error) {
     errors.push(`Медиаплан: ${error.message}`);
