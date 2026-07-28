@@ -6,6 +6,36 @@ tags: [ "IT-образование","программирование для д�
 readingTime: 7
 ogImage: "https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390106/cover_j7urb6.webp"
 published: true
+updatedAt: "2026-07-28"
+videos:
+  - id: "hi-end"
+    src: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1784980028/hi-end_khvbsx.mp4"
+    thumbnail: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1784980028/hi-end_khvbsx.jpg"
+    title: "Финал двенадцатилетнего пути в IT-образовании"
+    description: "Короткий фрагмент о завершении работы в IT-образовании и переходе к новому этапу."
+    uploadDate: "2026-07-25T11:47:08Z"
+    durationSeconds: 37
+  - id: "jasa-kids"
+    src: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389761/jasakids_ixnrjd.mp4"
+    thumbnail: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389761/jasakids_ixnrjd.jpg"
+    title: "Занятия по программированию с детьми в JasaKids"
+    description: "Фрагмент занятия, напоминающий о годах преподавания программированию детей."
+    uploadDate: "2026-05-21T18:56:01Z"
+    durationSeconds: 34
+  - id: "online-lesson"
+    src: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389763/online_zz4117.mp4"
+    thumbnail: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389763/online_zz4117.jpg"
+    title: "Онлайн-занятие с учеником"
+    description: "Фрагмент онлайн-урока и живого общения, которое стало важной частью преподавательского опыта."
+    uploadDate: "2026-05-21T18:56:03Z"
+    durationSeconds: 23
+  - id: "memories"
+    src: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389760/five_hs5bp5.mp4"
+    thumbnail: "https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389760/five_hs5bp5.jpg"
+    title: "Отзывы и памятные моменты преподавания"
+    description: "Короткая подборка воспоминаний о двенадцати годах работы с учениками."
+    uploadDate: "2026-05-21T18:56:00Z"
+    durationSeconds: 30
 ---
 ![education-hero](https://res.cloudinary.com/dtdrbhksw/image/upload/v1779390310/hero_fxxohe.webp)
 
@@ -17,9 +47,7 @@ published: true
 
 <div align="center">* * *</div>
 
-<video controls preload="metadata" width="100%">
-  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1784980028/hi-end_khvbsx.mp4" type="video/mp4" />
-</video>
+<PostVideo id="hi-end" />
 
 <div align="center">* * *</div>
 
@@ -91,9 +119,7 @@ published: true
 
 <div align="center">* * *</div>
 
-<video controls preload="metadata" width="100%">
-  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389761/jasakids_ixnrjd.mp4" type="video/mp4" />
-</video>
+<PostVideo id="jasa-kids" />
 
 <div align="center">* * *</div>
 
@@ -105,9 +131,7 @@ published: true
 
 <div align="center">* * *</div>
 
-<video controls preload="metadata" width="100%">
-  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389763/online_zz4117.mp4" type="video/mp4" />
-</video>
+<PostVideo id="online-lesson" />
 
 <div align="center">* * *</div>
 
@@ -123,9 +147,7 @@ published: true
 
 <div align="center">* * *</div>
 
-<video controls preload="metadata" width="100%">
-  <source src="https://res.cloudinary.com/dtdrbhksw/video/upload/v1779389760/five_hs5bp5.mp4" type="video/mp4" />
-</video>
+<PostVideo id="memories" />
 
 <div align="center">* * *</div>
 
