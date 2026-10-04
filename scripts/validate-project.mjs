@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  hashFile,
+  sha256,
   parseArticleFrontmatter,
   readJson,
   readingTimeDetails,
@@ -381,8 +381,8 @@ function validateContracts() {
 
 function validateConfiguration() {
   check(
-    hashFile(path.join(projectRoot, ".vscode", "settings.json")) ===
-      "834929e9726744e8be81a0f395098a5844cf5ef589429fa1a063f11c970f1fde",
+    sha256(read(".vscode/settings.json").replace(/\r\n/g, "\n")) ===
+      "d2afc90b8ca7d0458f9542f77ef6080e7bfcd2b2906a7b75fc62ccea8c0b0d78",
     ".vscode/settings.json был изменён",
   );
 }

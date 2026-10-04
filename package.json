@@ -9,6 +9,10 @@
   },
   "scripts": {
     "test": "node scripts/test-project.mjs",
-    "validate": "node scripts/validate-project.mjs --self-test"
+    "validate": "node scripts/validate-project.mjs --self-test",
+    "build:drafts": "node scripts/build-drafts.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "15.0.2"
   }
 }

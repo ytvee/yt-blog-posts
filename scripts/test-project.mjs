@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { hashFile, projectRoot } from "./lib/project.mjs";
+import { testDrafts } from "./test-drafts.mjs";
 
 const slug = "test-publication-flow";
 const workRoot = path.join(projectRoot, "work", "articles");
@@ -127,9 +128,10 @@ ${JSON.stringify(
   );
 }
 
+assert(!fs.existsSync(sourceDir), `Тестовый рабочий каталог уже существует: ${sourceDir}`);
+assert(!fs.existsSync(targetPath), `Тестовый целевой файл уже существует: ${targetPath}`);
+assert(!fs.existsSync(invalidFile), `Тестовый файл уже существует: ${invalidFile}`);
 try {
-  assert(!fs.existsSync(sourceDir), `Тестовый рабочий каталог уже существует: ${sourceDir}`);
-  assert(!fs.existsSync(targetPath), `Тестовый целевой файл уже существует: ${targetPath}`);
 
   fs.mkdirSync(path.join(sourceDir, "revisions"), { recursive: true });
   fs.writeFileSync(articlePath, article(), "utf8");
@@ -182,31 +184,35 @@ try {
 
   writeContracts(hashFile(articlePath));
   run("publication-gate.mjs", ["check", "--slug", slug]);
+  const initialHash = hashFile(articlePath);
   run("prepare-publication.mjs", ["--slug", slug, "--approved-by", "user"]);
   assert(fs.existsSync(targetPath), "Целевой файл не создан");
-  assert(hashFile(targetPath) === hashFile(articlePath), "SHA-256 после копирования не совпадает");
+  assert(hashFile(targetPath) === initialHash, "SHA-256 после копирования не совпадает");
   assert(
     fs.readFileSync(targetPath, "utf8").includes("published: false"),
     "При копировании изменён published",
   );
-  assert(fs.existsSync(sourceDir), "Рабочий каталог удалён после публикации");
+  assert(!fs.existsSync(sourceDir), "Рабочий каталог не удалён после публикации");
 
   const firstHash = hashFile(targetPath);
   run("prepare-publication.mjs", ["--slug", slug, "--approved-by", "user"]);
   assert(hashFile(targetPath) === firstHash, "Идемпотентный запуск изменил целевой файл");
 
+  fs.mkdirSync(sourceDir);
   fs.writeFileSync(articlePath, article("\n\nДобавлена утверждённая версия."), "utf8");
   run("reading-time.mjs", [`work/articles/${slug}/current.md`, "--write"]);
   run("prepare-publication.mjs", ["--slug", slug, "--approved-by", "user"], {
     expectFailure: true,
   });
   assert(hashFile(targetPath) === firstHash, "Устаревшие контракты позволили перезапись");
+  assert(fs.existsSync(sourceDir), "Отказ шлюза удалил рабочую папку");
 
   writeContracts(hashFile(articlePath));
+  const updatedHash = hashFile(articlePath);
   run("prepare-publication.mjs", ["--slug", slug, "--approved-by", "user"]);
-  assert(hashFile(targetPath) === hashFile(articlePath), "Новая версия не скопирована");
+  assert(hashFile(targetPath) === updatedHash, "Новая версия не скопирована");
   assert(hashFile(targetPath) !== firstHash, "Целевой файл не обновился");
-  assert(fs.existsSync(sourceDir), "Рабочий каталог удалён после обновления");
+  assert(!fs.existsSync(sourceDir), "Рабочий каталог не удалён после обновления");
 
   fs.writeFileSync(
     invalidFile,
@@ -233,3 +239,5 @@ published: true
   safeRemove(targetPath, path.join(projectRoot, "content"));
   if (fs.existsSync(invalidFile)) fs.rmSync(invalidFile);
 }
+
+testDrafts();
