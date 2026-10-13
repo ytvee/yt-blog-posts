@@ -343,8 +343,8 @@ function validateContracts() {
     "Маршрутизация интервью/исследовательского эссе не подключена",
   );
   check(
-    interview.includes("ровно один открытый вопрос") && interview.includes("последней реплики") &&
-      interview.includes("не знаю") && thinkingPolicy.includes("не имитировать") &&
+    interview.includes("ровно один открытый вопрос") && interview.includes("предыдущей реплики") &&
+      interview.includes("не знаю") && thinkingPolicy.includes("не переносить их фразы") &&
       (corpus.match(/https:\/\/www\.notboring\.co\/p\//g) ?? []).length >= 50 &&
       (corpus.match(/https:\/\/www\.paulgraham\.com\//g) ?? []).length >= 50,
     "Недостаточно зафиксированы исследовательский метод и корпус 50+50",
