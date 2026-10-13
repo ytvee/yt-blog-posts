@@ -1,0 +1,6 @@
+interface:
+  display_name: "Исследовать мысль автора"
+  short_description: "Задаёт один открытый вопрос и развивает мысль автора"
+  default_prompt: "Используй $author-interview, чтобы последовательно собрать мой опыт без анкеты и навязанных выводов."
+policy:
+  allow_implicit_invocation: true

@@ -192,6 +192,9 @@ function validateStructure() {
     "templates/blog-post.md",
     "templates/media-plan.md",
     ".agents/skills/plan-article-images/references/editorial-ink-prompts.md",
+    ".agents/skills/author-interview/SKILL.md",
+    "knowledge/essay-thinking-policy.md",
+    "research/essay-thinking-50x50-2026-10.md",
     "third-party-skills.lock.json",
     "scripts/reading-time.mjs",
     "scripts/publication-gate.mjs",
@@ -218,6 +221,7 @@ function validateStructure() {
 function validateSkills() {
   const localSkills = [
     "write-post",
+    "author-interview",
     "revise-post",
     "learn-from-edits",
     "trend-research",
@@ -294,11 +298,14 @@ function validateContracts() {
   const write = read(".agents/skills/write-post/SKILL.md");
   const revise = read(".agents/skills/revise-post/SKILL.md");
   const learn = read(".agents/skills/learn-from-edits/SKILL.md");
+  const interview = read(".agents/skills/author-interview/SKILL.md");
+  const thinkingPolicy = read("knowledge/essay-thinking-policy.md");
   const trends = read(".agents/skills/trend-research/SKILL.md");
   const headlines = read("knowledge/headline-policy.md");
   const imagePlan = read(".agents/skills/plan-article-images/SKILL.md");
   const imagePrompts = read(".agents/skills/plan-article-images/references/editorial-ink-prompts.md");
   const blogFormat = read("knowledge/blog-format.md");
+  const corpus = read("research/essay-thinking-50x50-2026-10.md");
   const mediaTemplate = read("templates/media-plan.md");
   const prepare = read(".agents/skills/prepare-publication/SKILL.md");
   const workflow = read(".github/workflows/redeploy-blog.yml");
@@ -329,6 +336,18 @@ function validateContracts() {
     normalizedHeadlines.includes("один заголовок — одна основная задача") &&
       normalizedHeadlines.includes("не копировать чужие заголовки"),
     "headline-policy: нет правил точности и самостоятельности",
+  );
+  check(
+    agents.includes("`author-interview`") && agents.includes("`knowledge/essay-thinking-policy.md`") &&
+      write.includes("../author-interview/SKILL.md") && revise.includes("../author-interview/SKILL.md"),
+    "Маршрутизация интервью/исследовательского эссе не подключена",
+  );
+  check(
+    interview.includes("ровно один открытый вопрос") && interview.includes("последней реплики") &&
+      interview.includes("не знаю") && thinkingPolicy.includes("не имитировать") &&
+      (corpus.match(/https:\/\/www\.notboring\.co\/p\//g) ?? []).length >= 50 &&
+      (corpus.match(/https:\/\/www\.paulgraham\.com\//g) ?? []).length >= 50,
+    "Недостаточно зафиксированы исследовательский метод и корпус 50+50",
   );
   check(
     revise.includes("<NNN>-before.md") &&
